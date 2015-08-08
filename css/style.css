@@ -13,9 +13,9 @@ p a {color: #a7002c;}
 
 #wrapper {margin: 0px auto; max-width: 900px; padding-top: 40px; }
 
-ul.nav {list-style: none; margin: 0px; padding: 0px; color: #06DDA0;}
+ul.nav {list-style: none; margin: 0px; padding: 0px; color: #a7002c;}
 ul.nav li {display: inline; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; padding-right: 4px;}
-ul.nav a {color: #06DDA0; border-bottom: 1px dotted #06DDA0;}
+ul.nav a {color: #a7002c; border-bottom: 1px dotted #a7002c;}
 ul.nav a.dim {color: #acacac; border-bottom: 1px dotted #acacac;}
 ul.nav a:hover {font-weight: 900;}
 
@@ -25,7 +25,7 @@ ul.nav a:hover {font-weight: 900;}
 table {border-spacing: 0px; min-width: 900px; margin: 0 auto;}
 th {padding: 10px}
 td, text {padding: 5px 10px; font-size: 12px; font-weight: lighter; line-height: 18px;}
-td.article a:visited {color: #777;}
+td.article a:visited {color: #a7002c;}
 td.date {min-width: 119px;}
 tr {text-align: left; vertical-align: top; padding: 4px 0px;}
 tr:nth-child(2n+2) {background: #eee;}
