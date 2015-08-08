@@ -3,8 +3,8 @@ body {font-family: Exo, Lucinda, Montserrat; font-size: 13px; padding: 10px 0px 
 h1 {font-size: 48px; margin-bottom: 20px;}
 .highlighted {color: #a7002c; opacity: 1; transition: opacity .25s ease-in-out;}
 .highlighted:hover {opacity: 0.5;}
-a {text-decoration: none; color: #333;}
-a:hover {padding-bottom: 1px; border-bottom: 1px dotted #333;}
+a {text-decoration: none; color: #a7002c;}
+a:hover {padding-bottom: 1px; border-bottom: 1px dotted #a7002c;}
 p a {color: #a7002c;}
 
 .light-type {color: #777;} /* #06DDA0 */
