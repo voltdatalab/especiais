@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
+    <script type="text/javascript" src="js/sheetsee.js"></script>
+    <link   type='text/css' rel='stylesheet' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/estilos.css">
+    
+    <meta name='keywords' content='passaralhos, demissões de jornalistas, voltdatalab, jornalismo de dados, jornalismo, jornalistas, a conta dos passaralhos'>
+<meta name='description' content='Este mapa mostra todos os homicídios de jornalistas no Brasil desde 2002'>
+<meta name='subject' content='jornalismo'>
+<meta name='copyright' content='Volt Data Lab - www.voltdata.info'>
+<meta name='language' content='PT'>
+<meta name='robots' content='index,follow'>
+<meta name='revised' content='Domingo, 9 de agosto de 2015'>
+<meta name='author' content='Volt Data Lab'>
+<meta name='designer' content=''>
+<meta name='reply-to' content='info@voltdata.info'>
+<meta name='owner' content=''>
+<meta name='url' content='http://voltdatalab.github.io/mapa-assassinatos-jornalistas/'>
+<meta name='identifier-URL' content='http://voltdatalab.github.io/mapa-assassinatos-jornalistas/'>
+<meta name='pagename' content='Jornalistas assassinados no Brasil'>
+<meta name='coverage' content='Brasil'>
+<meta name='distribution' content='Global'>
+<meta name='rating' content='General'>
+<meta name='subtitle' content='Por Volt Data Lab'>
+<meta name='target' content='all'>
+<meta name='HandheldFriendly' content='True'>
+<meta name='MobileOptimized' content='320'>    
+<meta property="og:image" content="https://www.cpj.org/reports/journos_police_operation_slums_2010-rtrs.jpg" />
+<meta property="og:url" content="http://voltdatalab.github.io/mapa-jornalistas-mortos/">
+<meta property="og:title" content="Jornalistas assassinados no Brasil">
+<meta property="og:description" content="Este mapa mostra todos os homicídios de jornalistas no Brasil desde 2002">  
+    
+    <!-- Add a Title -->
+    <title>Assassinatos de Jornalistas no Brasil desde 2002</title>
+  </head>
+  <style>
+    html {width: 100%; height: 100%;}
+    body {width: 100%; height: 100%; margin: 0;}
+    /* How about a different background color? */
+    #map {width: 100%; height: 100%; background-color: #F7CE86;}
+    .leaflet-popup-content li {list-style:none;}
+    .leaflet-popup-content {width: 250px;}
+    .leaflet-popup-content img {width: 100px;}
+    a {border: none;}
+  </style>
+  <body>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559db32030e8c39c" async="async"></script>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        // see how what the example spreadsheet looks like:
+        // https://docs.google.com/spreadsheet/lv?key=0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc
+        var URL = "https://docs.google.com/spreadsheets/d/17jwi5LNqcbpYM-w6gxNrYCmJCgt5PviX9f6F3BZxjJA/pubhtml"
+        Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+      })
+      function showInfo(data) {
+        // the column headers of the info you want in your popup
+        var optionsJSON = ["jornalista", "cidade", "estado", "ano", "veiculo", "midia", "fonte"]
+        // an html template for your popup
+        var template = "<ul><li><h2>{{jornalista}}</h2></li>"
+                     + "<li><h4>Local da Morte: {{cidade}} - {{estado}}</h4></li>"
+                     + "<li><h4>Ano da Morte: {{ano}}</h4></li>"
+                     + "<li><h4>Veículo: {{veiculo}}</h4></li>"
+                     + "<li><h5><em>Fonte: {{fonte}}</em></h5></li></ul>"
+        var geoJSON = Sheetsee.createGeoJSON(data, optionsJSON)
+        var map = Sheetsee.loadMap("map")
+        // Try different map tiles? examples.map-20v6611k
+        // examples.map-y7l23tes
+        // examples.map-h67hf2ic
+        // examples.map-i86nkdio
+        // examples.h186knp8
+        Sheetsee.addTileLayer(map, 'volt.n4kio888') 
+        Sheetsee.addMarkerLayer(geoJSON, map, template)
+      }
+    </script>
+    <div style="margin: 30px 150px 20px 120px; font-family: Raleway, Georgia;font-size: 85%;">
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_sharing_toolbox"></div>
+      <h1 style="font-family: Roboto">Mortes de jornalistas no Brasil desde 2002</h1>
+      <p>Este projeto foi realizado pelo <a href="http://voltdata.info" target="_blank">Volt Data Lab</a>, a partir de informações da <a href="https://en.rsf.org/press-freedom-barometer-journalists-killed.html?annee=2015" target="_blank"> ONG Repórteres Sem Fronteiras </a>.</p>
+      <p>Você pode se informar mais sobre mortes de jornalistas a partir de um relatório publicado em abril de 2014
+      pelo <em> Committee to Protect Journalistas</em>, <a href="https://www.cpj.org/pt/2014/05/segundo-tempo-para-a-imprensa-brasileira.php" target="_blank">neste link. 
+      No texto, o CPJ aponta que o Brasil é o 11º país mais letal do mundo para jornalistas, com mais de 30 assassinatos desde 2002.</a>
+      </p>
+      <p>A metodologia dessa pesquisa é bastante direta: o Volt pegou no site da RSF os nomes dos jornalistas assassinados e
+      cruzou com notícias divulgadas à época dos crimes. Cada ponto no mapa é um jornalista assassinado.</p>
+      
+    	<h3>DADOS</h3>
+                    <p>Todos os dados podem ser encontrados tabelados <a href="http://bit.ly/1L0tfMR" target="_blank"> neste link</a></p> 
+                        <p>Para entrar em contato, envie um e-mail para a gente:&nbsp;&nbsp;  <a href="mailto:info@voltdata.info" target="_top">&nbsp; <i class="fa fa-envelope-o"></i>info [a] voltdata.info</a>
+</p>
+                    <p>Feito por <a href="http://twitter.com/@ProjetoStock">@ProjetoStock</a>, a partir do código-base de <a href="http://www.twitter.com/jllord">@jlord</a>. </p>
+<h4><i class="fa fa-share-alt-square"></i> &nbsp;Compartilhe e siga o Volt - <a href="http://www.twitter.com/voltmediabr"><i class="fa fa-twitter"></i></a> &nbsp;<a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook"></i></a> &nbsp;<a href="https://medium.com/volt-data-lab"><i class="fa fa-medium"></i></a></h4>
+             
+					<p>
+                        São Paulo/Curitiba - 2015<br><br> <a id="redes" href="http://voltdata.info" target="_blank">  <img src="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" height="15" width="15"></a>
+					
+                    
+                  </div>
+               
+  
+    
+				
+  </body>
+</html>
