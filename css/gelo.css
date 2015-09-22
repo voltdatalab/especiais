@@ -1,36 +1,45 @@
 @import url(http://fonts.googleapis.com/css?family=Nunito);
 
+/* PRINCIPAL */
+
 html {
-  height: 100%;
-  overflow: hidden;
+    height: 100%;
+    overflow: hidden;
 }
 
 body { 
-  margin:0;
-  padding:0;
-	perspective: 1px;
-	transform-style: preserve-3d;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-family: Nunito;
+    margin:0;
+    padding:0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Nunito;
+}
+
+/* TEXTO */
+
+.header {
+    text-align: center;
+    font-size: 2.3em;
+    color: #fff;
+    text-shadow: 0 2px 2px #000;
 }
 
 h1 {
-  font-size: 2.3em;
-  line-height: 1.1em;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-  font-family: 'Oswald', Georgia, sans-serif;
-  padding: 10% 0% 0% 0%;
+    font-size: 2.3em;
+    line-height: 1.1em;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-family: 'Oswald', Georgia, sans-serif;
+    padding: 10% 0% 0% 0%;
 }
 
 h2{
     font-size: 2em;
-  line-height:;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-  font-family: 'Oswald', Georgia, sans-serif;    
+    line-height:;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-family: 'Oswald', Georgia, sans-serif;    
 }
 
 h3{
@@ -46,6 +55,15 @@ h4 {
     padding-bottom: 20px;
 }
 
+h5 {
+    font-size: 0.5em;
+    line-height: 1em;
+    margin: 6px 8px 0 0;
+    font-family: 'Exo', Arvo, sans-serif;
+    color: #ababab;
+    text-align: right;
+}
+
 h6 {
     font-size: 0.8em;
     line-height: 1.5em;
@@ -57,119 +75,87 @@ h6 {
 }
 
 p {
-  font-size: 120%;
-  line-height: 150%;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-}
-
-.slide {
-  position: relative;
-  padding: 25vh 10%;
-  min-height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
-	transform-style: inherit;
-}
-
-.slide:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
-}
-
-.title {
-  width: 50%;
-  padding: %;
-  border-radius: 5px;
-  background: rgba(240,230,220, .7);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-
-.slide:nth-child(2n) .title {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.slide:nth-child(2n+1) .title {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.slide, .slide:before {
-  background: 50% 50% / cover;  
-}
-
-.header {
-  text-align: center;
-  font-size: 175%;
-  color: #fff;
-  text-shadow: 0 2px 2px #000;
-}
-
-.text {
-  margin: 3% 20% 0% 20%;   
+    font-size: 120%;
+    line-height: 150%;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
 }
 
 a:link {
-  color: #a7002c;
-  text-decoration: none;
+    color: #a7002c;
+    text-decoration: none;
 }
 a:hover {
-  color: #a7002c;
+    color: #a7002c;
 }
 a:visited {
-  color: #a7002c;
+    color: #a7002c;
 }
 
+/* PROPRIEDADES DE IMAGENS */
+
+.slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+}
+
+.slide:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+
+.title {
+    width: 50%;
+    padding: %;
+    border: 1px #c00 solid;
+    border-radius: 5px;
+    background: rgba(240,230,220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide, .slide:before {
+    background: 50% 50% / cover; 
+    /* CÓDIGO PARA PREENCHER ESPAÇO DA IMG MANTENDO RATIO */
+}
+
+
+.text {
+    width:60%;
+    margin: 3% auto 0;  
+}
+
+
 .video {
-    text-align: center;    
+text-align: center;    
 }
 
 
 #title {
-  background-image: url("http://eoimages.gsfc.nasa.gov/images/imagerecords/49000/49932/ArcticSeaIce_dms_2011085_10281_lrg.jpg");
-   background-attachment: fixed; 
-   height: auto;
-       
-}
+background-image: url("http://eoimages.gsfc.nasa.gov/images/imagerecords/49000/49932/ArcticSeaIce_dms_2011085_10281_lrg.jpg");
+background-attachment: fixed; 
+height: auto;
+margin: -60px 0 0;
 
-#artico {
- background-image: url("https://www.nasa.gov/sites/default/files/726745main_seaice10_thul6_083.jpg");
 }
 
 #slide1:before {
-  background-image: url("https://www.nasa.gov/sites/default/files/726745main_seaice10_thul6_083.jpg");
-  transform: translateZ(-1px) scale(2);
-  z-index:-1;
-  font-family: 'Oswald', Georgia, sans-serif;
+background-image: url("https://www.nasa.gov/sites/default/files/726745main_seaice10_thul6_083.jpg");
+transform: translateZ(-1px) scale(2);
+z-index:-1;
+font-family: 'Oswald', Georgia, sans-serif;
 }
-
-#slide2 {
-  background-image: url("https://www.nasa.gov/sites/default/files/726745main_seaice10_thul6_083.jpg");
-  background-attachment: fixed;
-  font-family: 'Oswald', Georgia, sans-serif;
-}
-
-#slide3:before {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-5.jpg");
-  transform: translateZ(-1px) scale(2);
-  z-index:-1;
-  font-family: 'Oswald', Georgia, sans-serif;
-}
-
-#slide4 {
-  background: #222;
-}
-
 
 
 /* Parte do Header*/
-
 
 #menu
 {
@@ -179,10 +165,11 @@ color:#fff;
 font-family: arial, helvetica, sans-serif;
 white-space:nowrap;
 list-style-type:none;
-    height: 50px;
-    padding-bottom: 10px;
-    position: relative;
+height: 50px;
+padding-bottom: 10px;
+position: relative;
 }
+
 #menu li {display:inline;
 padding-right: 7px;
 }
@@ -196,36 +183,32 @@ float:center;
 {
 background:;
 color:#fff;
-    bottom: solid 1px #fff ;
+bottom: solid 1px #fff ;
 }
-
 
 #header {
-  z-index: 9999;
-  position: absolute;
-  height: auto;
-  text-align: center;
-  width: 100%;
-  top: 10px;
-  -webkit-perspective: 900px;
-  -moz-perspective: 900px;
-  perspective: 900px;
-  -webkit-perspective-origin: 50% 0;
-  -moz-perspective-origin: 50% 0;
-  perspective-origin: 50% 0;
-  -webkit-transition: all 0.5s ease-in;
-  -moz-transition: all 0.5s ease-in;
-  -ms-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+z-index: 9999;
+position: relative;
+height: auto;
+text-align: center;
+width: 100%;
+top: 10px;
+-webkit-perspective: 900px;
+-moz-perspective: 900px;
+perspective: 900px;
+-webkit-perspective-origin: 50% 0;
+-moz-perspective-origin: 50% 0;
+perspective-origin: 50% 0;
+-webkit-transition: all 0.5s ease-in;
+-moz-transition: all 0.5s ease-in;
+-ms-transition: all 0.5s ease-in;
+-o-transition: all 0.5s ease-in;
+transition: all 0.5s ease-in;
 }
 #header #header-content #header-front {
-  background-color: #fff;
-  width: 100%;
-    height: 0px;
-  position: absolute;
-  display: block;
-  padding: 0;
-  padding-top: 0px;
+width: 100%;
+display: block;
+padding: 0;
+padding-top: 0px;
 }
 
