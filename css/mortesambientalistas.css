@@ -21,6 +21,7 @@ html {
 
 #mapa{
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 h1 {
