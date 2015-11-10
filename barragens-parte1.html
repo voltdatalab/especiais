@@ -1,0 +1,138 @@
+    <!DOCTYPE html>
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+        <head>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <title></title>
+            
+            <link rel="icon" href="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" type="image/x-icon"/>
+            <link rel="stylesheet" href="css/barragens.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+            <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+            <script src="js/jquery.js" type="text/javascript"></script>
+            
+
+            <!-- Fontes do Google -->
+            <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+            <!-- GeoJson -->
+            <script src="js/barragens.js" type="text/javascript"></script>
+            
+            
+            
+
+                 <!-- METADADOS DA MATÉRIA  -->
+
+            <meta name='keywords' content='meio ambiente, barragens, Mariana, rios, rio, Minas Gerais, desastre natural, rompimento de barragem, notícias ambientais, Volt Data Lab, jornalismo de dados, jornalismo, jornalismo independente'>
+            <meta name='description' content='Parte 1: Mapa das barragens hidrelétricas'>
+            <meta name='subject' content='jornalismo de dados'>
+            <meta name='copyright' content='Volt Data Lab - www.voltdata.info'>
+            <meta name='language' content='PT'>
+            <meta name='robots' content='index,follow'>
+            <meta name='revised' content='Novembro de 2015'>
+            <meta name='author' content='Volt Data Lab'>
+            <meta name='designer' content='@ProjetoStock'>
+            <meta name='reply-to' content='info@voltdata.info'>
+            <meta name='owner' content='Volt Data Lab'>
+            <meta name='url' content='http://especiais.voltdata.info'>
+            <meta name='identifier-URL' content=''>
+            <meta name='pagename' content='Barragens no Brasil'>
+            <meta name='coverage' content='Brasil'>
+            <meta name='distribution' content='Global'>
+            <meta name='rating' content='General'>
+            <meta name='subtitle' content='Parte 1: Mapa das barragens hidrelétricas'>
+            <meta name='target' content='all'>
+            <meta name='HandheldFriendly' content='True'>
+            <meta name='MobileOptimized' content='320'>    
+            <meta property="og:image" content="Imagens/capa_barragens_1.png" />
+            <meta property="og:url" content="http://especiais.voltdata.info/barragens-parte1">
+            <meta property="og:title" content="Barragens no Brasil">
+            <meta property="og:description" content="Parte 1: Mapa das barragens hidrelétricas">  
+
+
+        </head>
+        
+        <header>
+            <nav id="header">
+                <div id="header-content" class="show-front">
+                    <div id="header-front">
+                        <ul id="menu">
+                            <li><a href="http://voltdata.info"><img src="http://static1.squarespace.com/static/551da417e4b05f67005d6abe/t/551dadd4e4b095e92c168eba/1441725661972/?format=1500w" width="75px"></a></li>
+                            <li style="padding-left:50%;padding-right:30px;"><a href="http://twitter.com/voltmediabr"><i class="fa fa-twitter fa-lg" style="color:#000;"></i></a></li>
+                            <li><a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook fa-lg" style="color:#000;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <body>
+
+            <div class="topo">
+            <h1>Barragens no Brasil</h1> 
+                <h2>Parte 1: Mapa das barragens hidrelétricas</h2>
+                <h3>Por <a href="http://voltdata.info>" target="_blank">Volt Data Lab</a> | Novembro/2015</h3>
+                <div class="addthis_sharing_toolbox"></div>
+            </div>
+                <div id="map"></div>
+                <script type="text/javascript" src="js/mapabarragens.js"></script>
+                
+<div class="principal">
+    <h4><em>Barragens no Brasil</em> é um projeto do Volt Data Lab para mapear as barragens brasileiras e divulgar informações sobre elas. Este é a primeira parte desse projeto, que continuará enquanto conseguirmos novas informações.</h4>
+            <div class="text">
+            <p>Um tsunami de lama arrasou o distrito mineiro de Bento Rodrigues no dia 5 de novembro de 2015, deixando mortes, prejuízos, comoção nacional e preocupações ambientais após o rompimento de duas barragens em Mariana (MG).</p> 
+
+<p>O desespero e desamparo da população local pode ser visto <a href=“https://medium.com/jornalistas-livres/tsunami-de-lama-1b634bdab459” target=“_blank”>nesta excelente reportagem</a> da repórter Laura Capriglione, enviada especial dos Jornalistas Livres para a região.</p>
+
+<p><a href=“http://brasil.elpais.com/brasil/2015/11/06/media/1446833927_065504.html” target=“blank”>Veja o que aconteceu com a barragem nesse infográfico do El País</a></p>
+
+<p>Para ter uma ideia da dimensão de pessoas afetadas e de áreas alagadas por conta da construção de barragens no Brasil, o <strong>Volt Data Lab</strong> mapeou as principais barragens de represas do setor elétrico no Brasil, de acordo com dados do  <a href='http://www.observabarragem.ippur.ufrj.br/' target='_blank'>Observatório Sócio-Ambiental da Barragens</a> (OSAB), ligado à Universidade Federal do Rio de Janeiro (UFRJ).</p>
+
+<p>Ao todo, o OSAB contabiliza 71 barragens do tipo, a maioria no Estado de Minas Gerais, mas também muito presente em Mato Grosso, Pará e São Paulo.</p>
+<h3>Barragem por Estado</h3>
+            <div class=".foto">
+    <img src="Imagens/chart1barragens.png" alt="gráfico por Estado/Barragens" width="100%"> 
+</div>
+    <h4>As barragens às vezes abrangem mais de um Estado. Nesse caso, foi considerado apenas o Estado principal apontado pelo OSAB, aquele comporta a maior parte da inundação.</h4>
+            
+<p>A região Sudeste conta com o maior número de barragens para usinas hidrelétricas (20).</p>
+                
+
+<p>O trabalho do OSAB é sólido e confiável, especialmente com todas as fontes utilizadas para a pesquisa. O Volt, todavia, faz três ressalvas para os dados compilados do site da entidade: <br><br><strong>1.</strong> os dados compilados pelo observatório dizem respeito a empreendimentos de energia elétrica, não de mineração (como foi o caso em Mariana); <br><strong>2.</strong> o site aparentemente não é atualizado há mais de um ano, desde outubro de 2014, de acordo com dados do <a href=“http://web.archive.org/web/*/http://www.observabarragem.ippur.ufrj.br/” target=“_blank”>Internet Archive</a>; <br><strong>3.</strong> alguns parâmetros e dados não foram apresentados de maneira uniforme no banco de dados da UFRJ, e, para assumir um padrão de apresentação, o Volt se reservou o direito de arredondar valores, datas ou até mesmo suprimir certos dados, como valores desatualizados de custo de obras.</p>
+
+                <p>Contatada pelo Volt por email e por telefone, a iniciativa da UFRJ não quis fornecer dados tabelados dessa pesquisa, e o Volt recorreu então à técnica de “raspagem” de dados do site do observatório, o que pode gerar alguns problemas de formatação <em>(se você notar alguma incorreção, mande um email para nós <a href=“mailto:info@voltdata.info”>clicando aqui</a>)</em>.</p>
+
+<p>Você pode acessar os <a href=“https://docs.google.com/spreadsheets/d/1up-Y8PB-y5UGE_mSo3L68R9evHGRoSM074b7vuxpl8w/edit?usp=sharing” target=“_blank”>dados de barragens tabelados (.csv) pelo Volt </a> a partir das informações do <a href=“http://www.observabarragem.ippur.ufrj.br/barragens” target=“_blank”>repositório do Observatório Sócio-Ambiental de Barragens</a>. Essa tabela foi utilizada como base para gerar o mapa, feito através do <a href="http://leafletjs.com/" target="_blank">Leaflet.js </a> com basemap do <a href="https://www.mapbox.com" target="_blank"> Mapbox</a>. </p>
+
+<p>O Movimento dos Afetados por Barragens (MAB) lançou o <a href=“http://www.mabnacional.org.br/noticia/boletim-mariana-mg” target=“_blank”> “Boletim Mariana” </a> para relatar o que tem acontecido na região afetada de Minas Gerais. Na parte da imprensa independente, você pode se informar com a tocante reportagem <a href=“https://medium.com/jornalistas-livres/tsunami-de-lama-1b634bdab459” target=“_blank”>Tsunami de Lama, de Laura Capriglione (Jornalistas Livres)</a>.</p>
+    </div>
+    
+            
+            
+            <div class="text" id="referencias">                
+                <p>Os códigos utilizados neste projeto estão disponíveis para download <a href="https://github.com/voltdatalab/especiais" target="_blank">aqui</a>, na página do Volt Data Lab no GitHub.</p> 
+                <p>Para entrar em contato, envie um e-mail para a gente:&nbsp;&nbsp;  <a href="mailto:info@voltdata.info" target="_top"><i class="fa fa-envelope-o"></i>&nbsp; info [a] voltdata.info</a>
+    </p>
+                <p>Feito por <a href="http://voltdata.info">Volt Data Lab</a> em novembro de 2015.</p>
+            </div>        
+            
+            </div>
+        <footer id="footer">
+                <div class="principal">
+                    
+                    <h6>Criado em 2014, o Volt Data Lab é uma agência de notícias do Brasil totalmente dedicada a reportagens baseadas em dados, desenvolvendo projetos de direitos humanos, política, economia, desenvolvimento social, mídia e tecnologia</h6>
+                    <h6><i class="fa fa-share-alt-square"></i> &nbsp;Compartilhe e siga o Volt - <a href="http://www.twitter.com/voltmediabr"><i class="fa fa-twitter"></i></a> &nbsp;<a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook"></i></a> &nbsp;<a href="https://medium.com/volt-data-lab"><i class="fa fa-medium"></i></a></h6>
+                
+                    <div class="addthis_sharing_toolbox"></div>
+
+                    <h6>São Paulo - 2015</h6>
+                  
+                </div>
+        </footer>
+
+        </body>
+</html>
