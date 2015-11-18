@@ -6,9 +6,11 @@
     <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
     <script type="text/javascript" src="js/sheetsee.js"></script>
     <link   type='text/css' rel='stylesheet' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link type="text/css" rel="stylesheet" href="css/estilos.css">
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/jornalistasmapa.css">
     
     <meta name='keywords' content='passaralhos, demissões de jornalistas, voltdatalab, jornalismo de dados, jornalismo, jornalistas, a conta dos passaralhos'>
 <meta name='description' content='Este mapa mostra todos os homicídios de jornalistas no Brasil desde 2002'>
@@ -39,21 +41,33 @@
     <!-- Add a Title -->
     <title>Assassinatos de Jornalistas no Brasil desde 2002</title>
   </head>
-  <style>
-    html {width: 100%; height: 100%;}
-    body {width: 100%; height: 100%; margin: 0;}
-    /* How about a different background color? */
-    #map {width: 100%; height: 100%; background-color: #F7CE86;}
-    .leaflet-popup-content li {list-style:none;}
-    .leaflet-popup-content {width: 250px;}
-    .leaflet-popup-content img {width: 100px;}
-    a {border: none;}
-  </style>
+    
   <body>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  	
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559db32030e8c39c" async="async"></script>
 
+      <header>
+            <nav id="header">
+                <div id="header-content" class="show-front">
+                    <div id="header-front">
+                        <ul id="menu">
+                            <li><a href="http://voltdata.info"><img src="http://static1.squarespace.com/static/551da417e4b05f67005d6abe/t/551dadd4e4b095e92c168eba/1441725661972/?format=1500w" width="75px"></a></li>
+                            <li style="padding-left:50%;padding-right:30px;"><a href="http://twitter.com/voltmediabr"><i class="fa fa-twitter fa-lg" style="color:#000;"></i></a></li>
+                            <li><a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook fa-lg" style="color:#000;"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+      
+      <div class="topo">
+            <h1>Assassinatos de jornalistas no Brasil desde 2002</h1>
+                <h3>Por <a href="http://voltdata.info>" target="_blank">Volt Data Lab</a> | Agosto/2015</h3>
+                <div class="addthis_sharing_toolbox"></div>
+            </div>
+      
+      
     <div id="map"></div>
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
@@ -82,31 +96,43 @@
         Sheetsee.addMarkerLayer(geoJSON, map, template)
       }
     </script>
-    <div style="margin: 30px 150px 20px 120px; font-family: Raleway, Georgia;font-size: 85%;line-height: 170%;text-align:center;">
+    
+      
+      <div id="conteudo">
+          
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="addthis_sharing_toolbox"></div>
-      <h1 style="font-family: Roboto">Mortes de jornalistas no Brasil desde 2002</h1>
-      <p>Este projeto foi realizado pelo <a href="http://voltdata.info" target="_blank">Volt Data Lab</a>, a partir de informações da <a href="https://en.rsf.org/press-freedom-barometer-journalists-killed.html?annee=2015" target="_blank"> ONG Repórteres Sem Fronteiras </a>.</p>
-      <p>Você pode se informar mais sobre mortes de jornalistas a partir de um relatório publicado em abril de 2014
-      pelo <em> Committee to Protect Journalistas</em>, <a href="https://www.cpj.org/pt/2014/05/segundo-tempo-para-a-imprensa-brasileira.php" target="_blank">neste link</a>.
-      No texto, o CPJ aponta que o Brasil é o 11º país mais letal do mundo para jornalistas, com mais de 30 assassinatos desde 2002.
-      </p>
-      <p>A metodologia dessa pesquisa é bastante direta: o Volt pegou no site da RSF os nomes dos jornalistas assassinados e
-      cruzou com notícias divulgadas à época dos crimes. Cada ponto no mapa é um jornalista assassinado.</p>
-      <br>
-      <a class="embedly-card" href="https://medium.com/volt-data-lab/quer-profiss%C3%A3o-perigosa-seja-radialista-em-uma-cidade-pequena-no-brasil-a96a1a0f7591">Quer profissão perigosa? Seja radialista em uma cidade pequena no Brasil - Volt Data Lab</a>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+      
+      <h4>* Atualizado em Novembro 2015 com vídeo sobre violência contra jornalistas e gráfico</h4>
+          
+          <h3> SOBRE O PROJETO</h3>
+          <p>Este projeto foi realizado pelo <a href="http://voltdata.info" target="_blank">Volt Data Lab</a>, a partir de informações da <a href="https://en.rsf.org/press-freedom-barometer-journalists-killed.html?annee=2015" target="_blank"> ONG Repórteres Sem Fronteiras </a>.</p>
+      <p>Você pode se informar mais sobre mortes de jornalistas a partir de um relatório publicado em abril de 2014 pelo <em> Committee to Protect Journalists</em>, <a href="https://www.cpj.org/pt/2014/05/segundo-tempo-para-a-imprensa-brasileira.php" target="_blank">neste link</a>.</p>
+      <p>No texto, o CPJ aponta que o Brasil é o 11º país mais letal do mundo para jornalistas, com mais de 30 assassinatos desde 2002.</p>
+        
+          <div class="video"> 
+          <img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rn-Ts69AGxH-HqXFMbUuqw.png" alt="grafico sobre assassinatos" width="100%" >
+          </div>
+          
+      <p>A metodologia dessa pesquisa é bastante direta: o Volt pegou no site da RSF os nomes dos jornalistas assassinados e cruzou com notícias divulgadas à época dos crimes. Cada ponto no mapa é um jornalista assassinado.</p>
+          <p>Veja também o texto do editor do Volt Data Lab sobre o projeto: <a href="https://medium.com/volt-data-lab/quer-profiss%C3%A3o-perigosa-seja-radialista-em-uma-cidade-pequena-no-brasil-a96a1a0f7591" target="_blank">Quer profissão perigosa? Seja radialista em uma cidade pequena no Brasil</a></p>
+        
+          <div class="video">
+          
+          <iframe width="100%" height="415" src="https://www.youtube.com/embed/ZSWg7iCtzaU" frameborder="0" allowfullscreen></iframe>
+
+              </div>
 <br>
     	<h3>DADOS</h3>
                     <p>Todos os dados podem ser encontrados tabelados <a href="https://docs.google.com/spreadsheets/d/17jwi5LNqcbpYM-w6gxNrYCmJCgt5PviX9f6F3BZxjJA/pubhtml" target="_blank"> neste link</a></p> 
                         <p>Para entrar em contato, envie um e-mail para a gente:&nbsp;  <a href="mailto:info@voltdata.info" target="_top"> <i class="fa fa-envelope-o"></i>&nbsp;info [a] voltdata.info</a>
 </p>
                     <p>Feito por <a href="http://twitter.com/@ProjetoStock">@ProjetoStock</a>, a partir do código-base de <a href="http://www.twitter.com/jllord">@jlord</a>. </p>
-<h4> &nbsp;Compartilhe e siga o Volt - <a href="http://www.twitter.com/voltmediabr"><i class="fa fa-twitter"></i></a> &nbsp;<a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook"></i></a> &nbsp;<a href="https://medium.com/volt-data-lab"><i class="fa fa-medium"></i></a></h4>
+<h4> &nbsp;Compartilhe e siga o Volt - <a href="http://www.twitter.com/voltmediabr"><i class="fa fa-twitter"></i></a> &nbsp;<a href="https://www.facebook.com/voltdata"><i class="fa fa-facebook"></i></a> &nbsp;<a href="https://medium.com/volt-data-lab"><i class="fa fa-medium"></i></a></h4></p>
              
 					<p>
-                        São Paulo/Curitiba - 2015<br><br> <a id="redes" href="http://voltdata.info" target="_blank">  <img src="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" height="15" width="15"></a>
-					
+                        São Paulo/Curitiba - 2015</p>
+      <br>
                     
                   </div>
                
