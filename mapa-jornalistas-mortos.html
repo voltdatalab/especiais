@@ -81,10 +81,10 @@
         var optionsJSON = ["jornalista", "cidade", "estado", "ano", "veiculo", "midia", "fonte"]
         // an html template for your popup
         var template = "<ul><li><h2>{{jornalista}}</h2></li>"
-                     + "<li><h4>Local da Morte: {{cidade}} - {{estado}}</h4></li>"
-                     + "<li><h4>Ano da Morte: {{ano}}</h4></li>"
-                     + "<li><h4>Veículo: {{veiculo}}</h4></li>"
-                     + "<li><h5><em>Fonte: {{fonte}}</em></h5></li></ul>"
+                     + "<li><h3>Local da Morte: {{cidade}} - {{estado}}</h3></li>"
+                     + "<li><h3>Ano da Morte: {{ano}}</h3></li>"
+                     + "<li><h3>Veículo: {{veiculo}}</h3></li>"
+                     + "<li><h4><em>Fonte: {{fonte}}</em></h4></li></ul>"
         var geoJSON = Sheetsee.createGeoJSON(data, optionsJSON)
         var map = Sheetsee.loadMap("map")
         // Try different map tiles? examples.map-20v6611k
@@ -106,16 +106,19 @@
       <h4>* Atualizado em Novembro 2015 com vídeo sobre violência contra jornalistas e gráfico</h4>
           
           <h3> SOBRE O PROJETO</h3>
+          
+          <a href="https://d262ilb51hltx0.cloudfront.net/max/1000/1*rn-Ts69AGxH-HqXFMbUuqw.png"><img class="imgwrap" src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rn-Ts69AGxH-HqXFMbUuqw.png" alt="grafico sobre assassinatos"></a>
           <p>Este projeto foi realizado pelo <a href="http://voltdata.info" target="_blank">Volt Data Lab</a>, a partir de informações da <a href="https://en.rsf.org/press-freedom-barometer-journalists-killed.html?annee=2015" target="_blank"> ONG Repórteres Sem Fronteiras </a>.</p>
       <p>Você pode se informar mais sobre mortes de jornalistas a partir de um relatório publicado em abril de 2014 pelo <em> Committee to Protect Journalists</em>, <a href="https://www.cpj.org/pt/2014/05/segundo-tempo-para-a-imprensa-brasileira.php" target="_blank">neste link</a>.</p>
       <p>No texto, o CPJ aponta que o Brasil é o 11º país mais letal do mundo para jornalistas, com mais de 30 assassinatos desde 2002.</p>
-        
-          <div class="video"> 
-          <img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rn-Ts69AGxH-HqXFMbUuqw.png" alt="grafico sobre assassinatos" width="100%" >
-          </div>
           
       <p>A metodologia dessa pesquisa é bastante direta: o Volt pegou no site da RSF os nomes dos jornalistas assassinados e cruzou com notícias divulgadas à época dos crimes. Cada ponto no mapa é um jornalista assassinado.</p>
           <p>Veja também o texto do editor do Volt Data Lab sobre o projeto: <a href="https://medium.com/volt-data-lab/quer-profiss%C3%A3o-perigosa-seja-radialista-em-uma-cidade-pequena-no-brasil-a96a1a0f7591" target="_blank">Quer profissão perigosa? Seja radialista em uma cidade pequena no Brasil</a></p>
+          <p>
+          O documentário abaixo foi feito pelas jornalistas Kamilla Morais e Jéssica Berto, como Trabalho de Conclusão de Curso (TCC) para a Universidade Paulista (UNIP), e <a href="http://ponte.org/documentario-jornalismo-e-a-violencia-na-profissao/" target="_blank">publicado pela Ponte.org</a> em 17/11/2015. 
+          </p>
+          <p>A peça "evidencia a violência sofrida por jornalistas e comunicadores durante o exercício da profissão", segundo as autoras, e conta com entrevistas com jornalistas experientes.
+ </p>
         
           <div class="video">
           
