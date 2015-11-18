@@ -2,7 +2,7 @@ html {width: 100%; height: 100%;}
 
 
 body {
-    width: 100%; 
+        min-height: 60em; 
     height: 100%; 
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -85,7 +85,24 @@ p {
 .imgwrap {
     float: right;
     width: 70%;
-    margin: 10px -15% 20px 20px;
+    margin: 0 auto;
+}
+
+.mapa {
+    margin: 0 auto;
+}
+
+#conteudo{
+    margin: 0 auto;
+    max-width: 70%;
+    min-width: 320px;
+    clear: right;
+}
+
+.topo{
+    width:70%;
+    margin: 30px auto;
+    text-align: center;
 }
 
 /* LINKS */
@@ -100,20 +117,6 @@ a:hover {
 }
 a:visited {
     color: #a7002c;
-}
-
-.mapa {
-    margin: 0 auto;
-}
-
-#conteudo{
-    margin: 0 9em;
-}
-
-.topo{
-    width:70%;
-    margin: 30px auto;
-    text-align: center;
 }
 
 /* PARTE DO HEADER - MENU*/
