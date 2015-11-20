@@ -3,10 +3,10 @@
         <head>
             <meta charset="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
             <title></title>
             
-            <link rel="icon" href="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" type="image/x-icon"/>
+            <link rel="icon" href="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" type="image/x-icon"/> 
             <link rel="stylesheet" href="css/barragem2.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
             <link rel="stylesheet" href="css/graficobarragens.css" type="text/css">
             <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -14,15 +14,12 @@
             
              <!-- scripts -->
             <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-            <script src="http://d3js.org/d3.v3.js"></script>
-            <script src="js/mapabarragensmineracao.js" type="text/javascript"></script>
-            <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
-            <script src="js/jquery.js" type="text/javascript"></script>    
-            <script type="text/javascript" src="js/sheetsee.js"></script>
             
-            <script type="text/javascript">
-            sheetsee.noConflict();
-            </script>
+            <script src="js/mapabarragensmineracao.js" type="text/javascript"></script>
+            <script type="text/javascript" src="js/tabletop1.3.4.js"></script> 
+            <script type="text/javascript" src="js/sheetsee.js"></script>
+            <script src="http://d3js.org/d3.v3.js"></script>
+            <script src="js/jquery.js" type="text/javascript"></script>
             
            <!-- Fontes do Google -->
             <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
@@ -97,24 +94,53 @@
 <p>Há no Brasil um total de 598 barragens de mineração, sendo 29 delas classificadas com alta categoria de risco - 18 com alto dano potencial associado, mostra um levantamento do Volt Data Lab em parceria com o Aos Fatos a partir da dados do Departamento Nacional de Produção Mineral (DNPM), do Ministério de Minas e Energia, de 2014.</p>
 <p>Dessas 29 barragens de alto risco, três não fazem parte da Política Nacional de Segurança de Barragens (PNSB), estabelecida pela <a href="http://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12334.htm">lei Nº 12.334</a> de 2010 para garantir a segurança, monitoramento e cultura de conformidade com regras para essas estruturas.</p>
 <p>Entre as barragens com risco considerado médio - 78 no total - a maioria não está inserida no PNSB (66). E, das de baixo risco (469), como as barragens da mineradora Samarco (joint-venture entre Vale e BHP), 150 não fazem parte da política.</p>
-<p>Todas as barragens de alto (171 barragens) ou médio (101 barragens) dano potencial associado estão no PNSB.  Entre as de baixo dano associado (316), 218 não estão no PNSB.</p>
+                <h2>Barragens por Estado</h2>
+<h3>Barragens recebem classificação de A até E pela relação entre combinação de risco de rompimento e dano potencial associado. Isso significa que uma barragem com baixo risco e baixo dano associado recebe a nota E, enquanto que uma com alto risco e alto dano recebe A. </h3>
+                
+                <h6><em>Passe o mouse para interagir com o gráfico</em></h6>
+            
+                <graph></graph>
+                <script src="js/barragens2graph.js" type="text/javascript"></script>
+
+    <h4><em>Fonte: Levantamento do Volt com dados do Departamento Nacional de Produção Mineral/MME</em></h4>
+                
+                 <ul>
+                <li class="legendaTabela1" style="color:#FF9900"><h3 class="semPNSB">Sem PNSB </h3></li>
+                <li class="legendaTabela2"><h3 class="comPNSB" style="color:#666666"> Com PNSB</h3></li>
+                </ul>
+                <table id="infoTable">
+<thead> 
+    <tr> 
+      <th style="">AM</th>  <th>AP</th> <th>BA</th> <th>ES</th> <th>GO</th> <th>MA</th> <th>MG</th> <th>MS</th> <th>MT</th> <th>PA</th> <th>PE</th> <th>PI</th> <th>PR</th> <th>RJ</th> <th>RO</th> <th>RS</th> <th>SC</th> <th>SE</th> <th>SP</th> <th>TO</th>
+    </tr> 
+</thead> 
+<tbody> 
+    <tr class="comPNSB"> 
+        <td>13</td>  <td>3</td> <td>9</td> <td>1</td> <td>10</td> <td>1</td> <td>205</td> <td>17</td> <td>21</td> <td>56</td> <td>0</td> <td>0</td> <td>3</td> <td>1</td> <td>6</td> <td>0</td> <td>4</td> <td>2</td> <td>21</td> <td>3</td>
+    </tr>
+        <tr class="semPNSB"> 
+         <td>1</td> <td>6</td> <td>12</td> <td>0</td> <td>8</td> <td>0</td> <td>93</td> <td>2</td> <td>23</td> <td>12</td> <td>1</td> <td>1</td> <td>1</td> <td>0</td> <td>16</td> <td>4</td> <td>6</td>  <td>2</td> <td>28</td> <td>6</td>
+    </tr>
+  
+</tbody> 
+</table> 
+               
+                <p>Todas as barragens de alto (171 barragens) ou médio (101 barragens) dano potencial associado estão no PNSB.  Entre as de baixo dano associado (316), 218 não estão no PNSB.</p>
 <p>Quase a metade de todas as 598 barragens listadas pelo DNPM fica no Estado de Minas Gerais (284 barragens).</p>
+                
+                <h2>Concentração de barragens no Brasil</h2>
+                <br>
+                <div class="foto">
+                <img alt="mapa brasil" src="imagens/concentra%C3%A7%C3%A3o%20de%20barragens%20no%20pais.png" width="100%">
+                    </div>
+
+                <h4><em>Fonte: Levantamento do Volt com dados do Departamento Nacional de Produção Mineral/MME</em></h4>
 <p>As barragens recebem uma classificação de A até E pela combinação do risco e do dano potencial associado. Uma barragem com baixo risco e baixo dano associado recebe a nota E, enquanto uma com alto risco e alto dano recebe A.</p>
 <p>São 18 barragens com nota A, 8 com nota B, 161 com nota C, 153 com nota D e 244 com nota D.</p>
 <p>As barragens da mineradora Samarco em Mariana, todas inclusive a da Santarém e do Fundão, tinham a classificação de risco baixa, mas com alto dano potencial associado a seu rompimento.</p>
 <p>Todas as barragens da Samarco possuem nota C (baixo risco e alto dano associado).</p>
 <p>A mineradora Vale, acionista da Samarco, possui pelo menos 10 barragens no município de Mariana não incluídas no PNSB, segundo os dados levantados.</p>
 <p>Segundo o DNPM, Mariana tem 20 barragens, sendo 15 ligadas à Vale S.A, quatro à Samarco Mineração S.A. e uma à Quartzito do Brasil Ltda. A pior nota das barragens é C, sendo a maioria E e uma D.</p>
-            
-<h2>Barragens por Estado</h2>
-<h3>Barragens recebem classificação de A até E pela relação entre combinação de risco de rompimento e dano potencial associado. Isso significa que uma barragem com baixo risco e baixo dano associado recebe a nota E, enquanto que uma com alto risco e alto dano recebe A. </h3>
-                
-                <h6><em>Passe o mouse para interagir com o gráfico</em></h6>
-            
-                <iframe height='400' scrolling='no' src='//codepen.io/voltdatalab/embed/MaxPem/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>.
-</iframe>
-
-    <h4><em>Fonte: Levantamento do Volt com dados do Departamento Nacional de Produção Mineral/MME</em></h4>
 
 <p>Você pode acessar os <a href=“https://docs.google.com/spreadsheets/d/11lkCxmYkE27wr_xhKg59G1jygBkmbadt9exHspGRuwo/pubhtml” target=“_blank”>dados de barragens tabelados (.csv) pelo Volt </a> a partir das informações do <a href=“http://www.dnpm.gov.br/” target=“_blank”>repositório do Departamento Nacional de Produção Mineral</a>.</p>
                 
