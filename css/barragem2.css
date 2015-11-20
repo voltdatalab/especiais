@@ -88,14 +88,13 @@ h6 {
 
 p {
     font-size: 1em;
-    line-height: 130%;
+    line-height: 180%;
     color: #333;
     font-family: 'Roboto', sans-serif;
 }
 
-#referencias {
-    border-top:solid 1px #cbcbcb; 
-    border-bottom:solid 1px #cbcbcb;
+ul {
+        line-height: 180%;
 }
 
 /* LINKS */
@@ -243,8 +242,9 @@ em {
 }
 
 #infoTable{
-    margin-left: -30px;
+    margin-left: 0px;
     width: 100%;
+
 }
 
 th {
