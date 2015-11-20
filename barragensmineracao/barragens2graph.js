@@ -1,7 +1,7 @@
 var margins = {
         top: 12,
         left: 30,
-        right: 200,
+        right: 120,
         bottom: 50
       };
       var legendPanel = {
