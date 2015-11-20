@@ -68,12 +68,12 @@ h4 {
 }
 
 h5 {
-    font-size: 0.5em;
+    font-size: 0.8em;
     line-height: 1em;
     margin: 6px 8px 0 0;
     font-family: 'Exo', Arvo, sans-serif;
     color: #ababab;
-    text-align: right;
+    text-align: center;
 }
 
 h6 {
@@ -198,8 +198,9 @@ a:visited {
 }
 }
 
-.foto {
-    text-align: center;    
+.foto { 
+    margin: 0px auto;
+    
 }
 
 #footer{
@@ -227,3 +228,88 @@ i {
 em {
     color: black;
 }
+
+.comPNSB {
+  color: #666666;
+}
+
+.semPNSB {
+  color: #FF9900;
+}
+
+.legendaTabela {
+    display:inline-block;
+    margin: 0 auto;
+}
+
+#infoTable{
+    margin-left: -30px;
+    width: 100%;
+}
+
+th {
+  text-align: center;
+  border-bottom: 3px solid #cbcbcb;
+  padding: 5px;
+}
+
+td {
+  border: 1px solid #cbcbcb;
+  text-align: center;
+}
+@media 
+only screen and (max-width: 900px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: none; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) 
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		left: 6px;
+		width: 50%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+    
+    td:nth-of-type(1):before { content: "UF"; }
+    	td:nth-of-type(2):before { content: "AM"; }
+	td:nth-of-type(3):before { content: "AP"; }
+	td:nth-of-type(4):before { content: "BA"; }
+	td:nth-of-type(5):before { content: "ES"; }
+	td:nth-of-type(6):before { content: "GO"; }
+	td:nth-of-type(7):before { content: "MA"; }
+	td:nth-of-type(8):before { content: "MG"; }
+	td:nth-of-type(9):before { content: "MS"; }
+	td:nth-of-type(10):before { content: "MT"; }
+	td:nth-of-type(11):before { content: "PA"; }
+    td:nth-of-type(12):before { content: "PE"; }
+    td:nth-of-type(13):before { content: "PI"; }
+    td:nth-of-type(14):before { content: "PR"; }
+    td:nth-of-type(15):before { content: "RJ"; }
+    td:nth-of-type(16):before { content: "RO"; }
+    td:nth-of-type(17):before { content: "RS"; }
+    td:nth-of-type(18):before { content: "SC"; }
+    td:nth-of-type(19):before { content: "SE"; }
+    td:nth-of-type(20):before { content: "SP"; }
+    td:nth-of-type(21):before { content: "TO"; }
+    
+*/

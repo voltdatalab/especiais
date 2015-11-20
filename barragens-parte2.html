@@ -7,7 +7,9 @@
             <title></title>
             
             <link rel="icon" href="https://farm1.staticflickr.com/388/20208440111_1e8a3bef75_s.jpg" alt="Logo Square" type="image/x-icon"/> 
-            <link rel="stylesheet" href="css/barragem2.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
+            
+            <link rel="stylesheet" title="primario" href="css/barragem2.css" type="text/css">
+            
             <link rel="stylesheet" href="css/graficobarragens.css">
             <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
@@ -15,7 +17,7 @@
              <!-- scripts -->
            <script src="js/jquery.js" type="text/javascript"></script>
             <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>       
-            <script src="js/mapabarragensmineracao.js" type="text/javascript"></script>
+            <script src="barragensmineracao/mapabarragensmineracao.js" type="text/javascript"></script>
             <script type="text/javascript" src="js/tabletop1.3.4.js"></script> 
             <script type="text/javascript" src="js/sheetsee.js"></script>
             <script src="http://d3js.org/d3.v3.js"></script>
@@ -57,7 +59,16 @@
             <meta property="og:title" content="Barragens no Brasil">
             <meta property="og:description" content="Parte 2: As centenas de barragens de mineração pelo país">  
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-67508392-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
         </head>
         
         <header>
@@ -75,19 +86,23 @@
         </header>
 
         <body>
-            
+           <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559db32030e8c39c" async="async"></script> 
 
             <div class="topo">
             <h1>Barragens no Brasil</h1> 
                 <h2>Parte 2: As centenas de barragens de mineração</h2>
                 <h3>Por <a href="http://voltdata.info>" target="_blank">Volt Data Lab</a> | Novembro/2015</h3>
+                <h5>Clique nos pontos do mapa para interagir</h5>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
                 <div class="addthis_sharing_toolbox"></div>
             </div>
                 <div id="map"></div>
                 <script type="text/javascript" src="js/mapabarragens.js"></script>
                 
 <div class="principal">
-    <h4><em>Barragens no Brasil</em> é um projeto do Volt Data Lab para mapear as barragens brasileiras e divulgar informações sobre elas. Esta é a segunda parte desse projeto.</h4>
+    <h4><em>Barragens no Brasil</em> é um projeto do Volt Data Lab para mapear as barragens brasileiras e divulgar informações sobre elas. Esta é a segunda parte desse projeto. Veja a <a href="http://especiais.voltdata.info/barragens-parte1" target="_blank"> primeira parte aqui</a>.</h4>
             <div class="text">
  
 <p>Há no Brasil um total de 598 barragens de mineração, sendo 29 delas classificadas com alta categoria de risco - 18 com alto dano potencial associado, mostra um levantamento do Volt Data Lab em parceria com o Aos Fatos a partir da dados do Departamento Nacional de Produção Mineral (DNPM), do Ministério de Minas e Energia, de 2014.</p>
@@ -99,26 +114,22 @@
                 <h6><em>Passe o mouse para interagir com o gráfico</em></h6>
             
                 <graph></graph>
-                <script src="js/barragens2graph.js" type="text/javascript"></script>
+                <script src="barragensmineracao/barragens2graph.js" type="text/javascript"></script>
 
     <h4><em>Fonte: Levantamento do Volt com dados do Departamento Nacional de Produção Mineral/MME</em></h4>
-                
-                 <ul>
-                <li class="legendaTabela1" style="color:#FF9900"><h3 class="semPNSB">Sem PNSB </h3></li>
-                <li class="legendaTabela2"><h3 class="comPNSB" style="color:#666666"> Com PNSB</h3></li>
-                </ul>
+                    
                 <table id="infoTable">
 <thead> 
     <tr> 
-      <th style="">AM</th>  <th>AP</th> <th>BA</th> <th>ES</th> <th>GO</th> <th>MA</th> <th>MG</th> <th>MS</th> <th>MT</th> <th>PA</th> <th>PE</th> <th>PI</th> <th>PR</th> <th>RJ</th> <th>RO</th> <th>RS</th> <th>SC</th> <th>SE</th> <th>SP</th> <th>TO</th>
+      <th>UF</th><th>AM</th>  <th>AP</th> <th>BA</th> <th>ES</th> <th>GO</th> <th>MA</th> <th>MG</th> <th>MS</th> <th>MT</th> <th>PA</th> <th>PE</th> <th>PI</th> <th>PR</th> <th>RJ</th> <th>RO</th> <th>RS</th> <th>SC</th> <th>SE</th> <th>SP</th> <th>TO</th>
     </tr> 
 </thead> 
 <tbody> 
     <tr class="comPNSB"> 
-        <td>13</td>  <td>3</td> <td>9</td> <td>1</td> <td>10</td> <td>1</td> <td>205</td> <td>17</td> <td>21</td> <td>56</td> <td>0</td> <td>0</td> <td>3</td> <td>1</td> <td>6</td> <td>0</td> <td>4</td> <td>2</td> <td>21</td> <td>3</td>
+        <td>Com PNSB</td><td>13</td>  <td>3</td> <td>9</td> <td>1</td> <td>10</td> <td>1</td> <td>205</td> <td>17</td> <td>21</td> <td>56</td> <td>0</td> <td>0</td> <td>3</td> <td>1</td> <td>6</td> <td>0</td> <td>4</td> <td>2</td> <td>21</td> <td>3</td>
     </tr>
         <tr class="semPNSB"> 
-         <td>1</td> <td>6</td> <td>12</td> <td>0</td> <td>8</td> <td>0</td> <td>93</td> <td>2</td> <td>23</td> <td>12</td> <td>1</td> <td>1</td> <td>1</td> <td>0</td> <td>16</td> <td>4</td> <td>6</td>  <td>2</td> <td>28</td> <td>6</td>
+         <td>Sem PNSB</td><td>1</td> <td>6</td> <td>12</td> <td>0</td> <td>8</td> <td>0</td> <td>93</td> <td>2</td> <td>23</td> <td>12</td> <td>1</td> <td>1</td> <td>1</td> <td>0</td> <td>16</td> <td>4</td> <td>6</td>  <td>2</td> <td>28</td> <td>6</td>
     </tr>
   
 </tbody> 
