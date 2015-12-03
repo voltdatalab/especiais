@@ -105,3 +105,9 @@ li {
     width:100%;
     padding: 50px 0 50px 0;
 }
+
+#credito{
+  text-align:right;
+    margin-right:70px;
+    font-weight: 300;
+}
