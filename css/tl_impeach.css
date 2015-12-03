@@ -38,8 +38,9 @@ span {
   color: #a7002c; 
 }
 
-#principal{
-  
+.principal{
+  width:50%;
+    margin: 30px auto;
 }
 
 .conteudo{
@@ -97,4 +98,10 @@ li {
   padding-bottom: 0px;
   margin-bottom: 0px;
   margin-left: 30px;
+}
+
+#footer{
+    background-color: #cbcbcb; 
+    width:100%;
+    padding: 50px 0 50px 0;
 }
