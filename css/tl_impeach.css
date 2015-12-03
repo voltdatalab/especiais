@@ -1,0 +1,100 @@
+body {
+  font-family: 'Oswald', sans-serif;
+        background-color: #ededed;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Rubik';
+  line-height: 1.8em;
+}
+
+span {
+  font-size:20px;
+  color: #a7002c; 
+}
+
+#principal{
+  
+}
+
+.conteudo{
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+#graph {
+  margin: 0 auto;
+}
+
+.linha {
+  border-bottom: 3px #cbcbcb solid;
+  margin: 25px 0;
+}
+
+a {
+  color: #a7002c;
+}
+
+a:hover {
+  color: #cbcbcb;
+}
+
+a:visited {
+  color: #a7002c;
+}
+
+#header {
+  margin: 20px 5%;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+li {
+  display: inline-block;
+}
+
+.redes{
+   margin-left: 30px;
+  margin-top: 10px;
+  float:right;
+}
+
+#logo {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  width: 70px; 
+}
+
+#logoaf {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+}
