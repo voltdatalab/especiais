@@ -1,4 +1,4 @@
-var margin = {left:180, top:0, right:120, bottom:100},
+var margin = {left:100, top:50, right:120, bottom:140},
 	width = Math.max( Math.min(window.innerWidth, 1100) - margin.left - margin.right - 20, 400),
     height = Math.max( Math.min(window.innerHeight - 250, 900) - margin.top - margin.bottom - 20, 400),
     innerRadius = Math.min(width * 0.25, height * .45),
@@ -25,7 +25,7 @@ var loom = loom()
     .padAngle(0.05)
 	.sortSubgroups(sortAlpha)
 	//.heightInner(28)
-	.emptyPerc(0.6)
+	.emptyPerc(0.19)
 	.widthOffsetInner(40)
 	//.widthOffsetInner(function(d) { return 6 * d.length; })
 	.value(function(d) { return d.headlines; })
@@ -56,7 +56,7 @@ characterNotes["Declarações"] = "Reflexões, comentários gerais, opiniões de
 ////////////////////////////////////////////////////////////
 			
 var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 1100 500");
+    .attr("viewBox", "0 0 800 660");
     //.attr("width", width + margin.left + margin.right)
     //.attr("height", height + margin.top + margin.bottom);
 
