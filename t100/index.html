@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+	    <title>Michel Temer: polêmicas, políticas e repercussões</title>
+	    <meta name="author" content="Sérgio Spagnuolo">
+	    <meta name="description" content="Data Sketches - July - Movies - Nadieh - The words in LotR">
+	    <meta name="keywords" content="política, Brasil, política brasileira, jornalismo de dados, data journalism, data visualization, volt data lab">
+		
+		<!-- fontes -->
+		<link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Macondo" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant:300,400" rel="stylesheet">
+		
+		<!-- estilos -->
+		<link href="style.css" rel="stylesheet">
+		
+		<!-- D3 v4 -->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		
+		<!-- funções do chord diagram-->
+		<script src="loom.js"></script>
+		<script src="string.js"></script>
+        
+        <!-- font awesome! -->
+        <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
+        
+	</head>
+	<body>
+		
+		<div class="content-wrapper">
+			<h1 id="titulo">Michel Temer, <span class="cem">100 dias </span></h1>
+			<h4 id="subtitulo">Um balanço sobre os primeiros meses do presidente interino no poder</h4>
+            <div id="linha"></div>
+            <h3 id="creditoum">Por <a href="http://twitter.com/voltdatalab" target="_blank">Volt Data Lab</a> | 31/08/2016 | <i class="fa fa-twitter fa-lg" aria-hidden="true" style="margin: 0px 10px"></i> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+
+</h3>
+			<div id="intro">
+				<p>Os 100 dias do governo interino de Michel Temer foram marcados pela introdução de novas políticas, protestos contra a administração e polêmicas envolvendo ministros e indicados para cargos.</p>
+                <p>Desde que assumiu o cargo interinamente, em 12 de maio, o governo de Michel Temer tem sido motivo de controvérsias, desde a formação inicial de seu gabinete majoritariamente masculino e branco até a demissão prematura de ministros e reajuste de servidores públicos em tempos de vacas magras. Mas ainda não estava quantificado como essas controvérsias se desenrolaram.</p>
+                <p>Pesquisa do Volt Data Lab analisou cerca de 700 reportagens, notas e publicações da Agência Brasil de 12 de maio a 22 de agosto nas quais o presidente interino Michel Temer foi citado. </p>
+</div>
+			<div id="note">Passe o cursor sobre o gráfico para interagir</div>
+		</div>
+			<div id="chart"></div>
+			
+		<div class="content-wrapper">
+			<div id="footer">
+				
+				<div id="sources">FONTE: Levantamento do Volt Data Lab com cerca de 700 publicações da <a href="http://agenciabrasil.ebc.com.br/">Agência Brasil</a> de 12 de maio a 22 de agosto de 2016.</div>
+			</div>
+		</div>
+		
+		<script src="script.js"></script>
+		
+	</body>
+</html>
