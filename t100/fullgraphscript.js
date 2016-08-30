@@ -1,4 +1,4 @@
-var margin = {left:120, top:20, right:120, bottom:100},
+var margin = {left:200, top:20, right:120, bottom:100},
 	width = Math.max( Math.min(window.innerWidth, 1100) - margin.left - margin.right - 20, 400),
     height = Math.max( Math.min(window.innerHeight - 250, 900) - margin.top - margin.bottom - 20, 400),
     innerRadius = Math.min(width * 0.25, height * .45),
@@ -56,7 +56,7 @@ descricao["Declarações"] = "Reflexões e comentários gerais de dentro do Exec
 ////////////////////////////////////////////////////////////
 			
 var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 900 600");
+    .attr("viewBox", "0 0 1200 600");
     //.attr("width", width + margin.left + margin.right)
     //.attr("height", height + margin.top + margin.bottom);
 

@@ -20,7 +20,7 @@ Além disso, outras matérias como que as falam genericamente de governo ou medi
 
 Os critérios de escolha para selecionar a Agência Brasil como fonte foram: 
 1. fonte aberta;
-2. isenção[^Embora a própria agência seja motivo de polêmica envolvendo a indicação do jornalista Ricardo Melo para presidência da EBC, é possível dizer que o tom das matérias é isento.];
+2. isenção[^Embora a própria agência seja motivo de polêmica envolvendo a indicação do jornalista [Ricardo Melo](http://agenciabrasil.ebc.com.br/politica/noticia/2016-05/ricardo-melo-ingressa-com-acao-no-stf-para-garantir-mandato-de-presidente) para presidência da EBC, é possível dizer que o tom das matérias é isento.];
 3. cobertura geral de assuntos de governo;
 4. não repetição exaustiva de de temas[^A repetição exaustiva de temas pode ser afetar o levantamentos de casos únicos. Por exemplo, falar todo dia sobre o afastamento de Romero Jucá do Ministério do Planejamento não significa que cada nova matéria trata de casos diferentes, e sim explora o mesmo caso com diferentes ângulos - de toda forma, é o mesmo caso]. 
 
