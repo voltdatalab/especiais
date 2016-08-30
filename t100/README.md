@@ -1,24 +1,51 @@
-The idea
+# Concepção 
 
-About a month ago I got an email from Christian Wisniewski with a sketch that looked a bit like a Chord diagram but with "nodes" in the center. It seemed very intriguing and since I have a fond history of hacking the chord diagram for other purposes I wanted to try to create my own version of Christian's idea at some point and when I came across the LotR word count data I thought that would fit the layout very well
+Este projeto foi feito a partir de um levantamento da agência de jornalismo **Volt Data Lab**.
 
-The layout
+A ideia nos foi indicada por um potencial cliente o qual, após ver o resultado parcial da pesquisa, não se interessou em prosseguir e publicar o material. 
 
-To build this layout I used d3's chord and ribbon functions as my basis but then started systematically making alterations to the chords and adding another level of data through the inner labels. I'll create a  blog on the layout in case you might be interested in re-using it for something else.
+O Volt, no entanto, empenhado em fazer reportagens e levantamentos de potencial interesse público e que considera ter relevância, não quis abandonar o projeto e decidiu prosseguir para publicação por conta própria. 
 
-I got many great suggestions for naming the layout, butterfly, Labrys, Ginko leaf and eye of Sauron, I eventually chose the one that would best fit the shape even for different data (this data just happened to be symmetrical, but that is not a prerequesite). Also, just like d3.chord has d3.ribbon, I actually needed 2 names for these functions. So I went for loom() and strings()
+## Metodologia
 
-The colors
+A pesquisa analisou cerca de 700 reportagens, notas e publicações da [Agência Brasil](http://agenciabrasil.ebc.com.br) de 12 de maio a 22 de agosto nas quais o presidente interino Michel Temer foi citado. 
 
-The colors are based on picking colors from screenshots of that location in the movie (and my own personal feeling on what color represented my memory of that location) and sometimes made a bit more vibrant 
+![100 dias Temer - Gráfico por Volt Data Lab](https://c1.staticflickr.com/9/8469/28580610924_9c30ecca93_b.jpg)
 
-Data collection & preparation
+Foram realizadas buscas [^A busca exata considerada foi: `”Michel Temer” site:http://agenciabrasil.ebc.com.br`] no [Google](http://google.com) com o nome de “Michel Temer”, levando em conta apenas material publicado no site da agência estatal de notícias. 
 
-In original dataset I had information on the number of words spoken by each character by scene and what race that character is. However, I found scenes to be a bit arbitrary. They are attached to the making of the movie, not the movie experience perse. So instead I went ahead and manually added an on-screen location to each of the ±800 rows of data. Besides a map of Middle-Earth, I relied heavily on the Age of the Ring scripts of the extended editions and the original scripts of the non-extended editions found on [IMSDb](http://www.imsdb.com/). These scripts sometimes mention the location when they talk about the scene in general. And of course, I used my own memory of watching the movies time and time again. 
+Matérias sem citar Temer diretamente texto das matérias foram desconsideradas, mesmo que envolvesse aliados, ministros ou políticas ligadas a ele. Às vezes o nome do presidente interino pode constar nos metadados da página, mas não necessariamente no conteúdo.
 
-I made two columns, one with a broad location (Gondor for example) and an extra with a more detailed location (Minas Tirith). I feel that the general location was straightforward to find. The only issue was that I didn't quite know where to group certain very specific location to. The Grey Havens for example; not the Shire or Rivendell... But it is too small to really are its own broad location. 
-The detailed location, on the other hand, was sometimes just not known, too general or I couldn't find any mention of it in the scripts, but I think that about 90% have good detailed locations. However, during the buld of this visual I saw early on that there were already too many strings for the general location, so I aggregated the dataset on character and location.
+Além disso, outras matérias como que as falam genericamente de governo ou medidas provisórias, por exemplo, sem citar Temer, também foram desconsideradas.
 
-Eventually this was a labor of love, during a lovely Sunday, and I tried my very best to add the right data to each scene.
+Os critérios de escolha para selecionar a Agência Brasil como fonte foram: 
+1. fonte aberta;
+2. isenção[^Embora a própria agência seja motivo de polêmica envolvendo a indicação do jornalista Ricardo Melo para presidência da EBC, é possível dizer que o tom das matérias é isento.];
+3. cobertura geral de assuntos de governo;
+4. não repetição exaustiva de de temas[^A repetição exaustiva de temas pode ser afetar o levantamentos de casos únicos. Por exemplo, falar todo dia sobre o afastamento de Romero Jucá do Ministério do Planejamento não significa que cada nova matéria trata de casos diferentes, e sim explora o mesmo caso com diferentes ângulos - de toda forma, é o mesmo caso]. 
 
-Built with [blockbuilder.org](http://blockbuilder.org)
+Embora alguns casos não tenham sido reportados pela Agência Brasil, é razoável considerar que a agência estatal faça uma cobertura bastante geral do governo, sendo possível, assim, chegar às conclusões da pesquisa.
+
+O conteúdo levantado foi classificado em cinco categorias principais e nove subcategorias, escolhidas após primeira análise do material, buscando sempre a neutralidade na escolha.
+
+São as categorias: 
+1. **Polêmicas** = controvérsias envolvendo Michel Temer, integrantes do governo ou políticas federais;
+2. **Políticas** = questões envolvendo políticas públicas a respeito de diversos temas, como econômicos, sociais, ambientais etc. promovidos pelo governo federal e seus membros;
+3. **Repercussões** = reflexões, comentários gerais, opiniões, manifestações sobre o governo interino ou sobre o presidente interino por interlocutores de fora do Executivo, seja a neutro/indefinido, a favor ou contra ele;
+4. **Nomeações** = indicações ou exonerações feitas por Michel Temer para cargos federais e articulações para posições no Congresso;
+5. **Perspectivas no governo** = situação atual, previsões, interesses declarados, comentários gerais, promessas,  declarações gerais, posicionamentos, itens de itinerário do presidente e do governo e planos não concretos por membros do governo.
+
+São as subcategorias: 
+1. **Base Aliada** = item relativo a questões políticas do governo no Congresso;
+2. **Cortes & Revisões** = relativo a revisões (para cima ou para baixo) de programas existentes e cortes orçamentários, por exemplo;
+3. **Ministros & Cargos** = relativo a questões sobre ministérios e ministros e indicados a cargos no governo federal e estatais como sujeitos ativos, como por exemplo a questões relacionadas a eles mesmos, como polêmicas, nomeações, expectativas sobre o cargo e interesses, ou a discussões sobre políticas gerais etc;
+4. **Novas Políticas** = relativo a novos programas, ações e medidas do novo governo;
+5. **Políticas Existentes** = relativo à manutenção de programas, planos e políticas existentes, sem revisões ou cortes;
+6. **Protestos** = relativo a manifestações contra o governo por grupo de pessoas;
+7. **Impeachment** = relativo a repercussões relacionadas ao impeachment de Dilma Rousseff;
+8. **Temer** = tópico relativo diretamente a Michel Temer como sujeito ativo em assuntos gerais;
+9. **Outros** = todo o resto que não cabe nas subcategorias mencionadas;
+
+## Gráficos
+
+O gráfico principal foi feito em [D3.js](http://d3js.org) a partir da sensacional [adaptação](http://www.visualcinnamon.com/portfolio/words-lord-of-the-rings) do chamado “diagrama de cordas” feita por [Nadieh Bremer](https://twitter.com/NadiehBremer), do [Visual Cinnamon](http://www.visualcinnamon.com/).

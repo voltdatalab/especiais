@@ -1,4 +1,4 @@
-var margin = {left:120, top:20, right:120, bottom:100},
+var margin = {left:20, top:80, right:120, bottom:10},
 	width = Math.max( Math.min(window.innerWidth, 1100) - margin.left - margin.right - 20, 400),
     height = Math.max( Math.min(window.innerHeight - 250, 900) - margin.top - margin.bottom - 20, 400),
     innerRadius = Math.min(width * 0.25, height * .45),
@@ -9,14 +9,14 @@ width = outerRadius * 2 + margin.right + margin.left;
 height = outerRadius * 2 + margin.top + margin.bottom;
 	
 //Reset the overall font size
-var newFontSize = Math.min(70, Math.max(40, innerRadius * 72.5 / 250));
+var newFontSize = Math.min(70, Math.max(40, innerRadius * 250 / 250));
 d3.select("html").style("font-size", newFontSize + "%");
 
 ////////////////////////////////////////////////////////////
 ////////////////// Set-up Chord parameters /////////////////
 ////////////////////////////////////////////////////////////
 	
-var pullOutSize = 20 + 30/135 * innerRadius;
+var pullOutSize = 20 + 20/135 * innerRadius;
 var numFormat = d3.format(",.0f");
 var defaultOpacity = 0.85,
 	fadeOpacity = 0.075;
@@ -33,7 +33,7 @@ var loom = loom()
 	.outer(function(d) { return d.agentes; });
 
 var arc = d3.arc()
-    .innerRadius(innerRadius*1.02)
+    .innerRadius(innerRadius*1.01)
     .outerRadius(outerRadius);
 
 var string = string()
@@ -55,8 +55,8 @@ descricao["Declarações"] = "Reflexões e comentários gerais de dentro do Exec
 ////////////////////// Create SVG //////////////////////////
 ////////////////////////////////////////////////////////////
 			
-var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 900 600");
+var svg = d3.select("#mobilechart").append("svg")
+    .attr("viewBox", "0 0 400 430");
     //.attr("width", width + margin.left + margin.right)
     //.attr("height", height + margin.top + margin.bottom);
 
@@ -193,7 +193,7 @@ d3.json('dados.json', function (error, dataAgg) {
 
 	//The text needs to be rotated with the offset in the clockwise direction
 	var outerLabels = arcs.append("g")
-		.each(function(d) { d.angle = ((d.startAngle + d.endAngle) / 2); })
+		.each(function(d) { d.angle = ((d.startAngle + d.endAngle)/2); })
 		.attr("class", "outer-labels")
 		.attr("text-anchor", function(d) { return d.angle > Math.PI ? "end" : null; })
 		.attr("transform", function(d,i) { 

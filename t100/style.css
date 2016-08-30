@@ -7,7 +7,11 @@ body {
     font-family: 'Noto Sans', serif;
     font-size: 1.2rem;
     color: white;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#header{
+    
 }
 
 h1 {
@@ -41,10 +45,10 @@ h1 {
 }
 
 #note {
-    font-size: 14px;
+    font: 1.6em 'Inconsolata';
     margin: 0px 30px 10px 30px;
     max-width: 800px;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 #chart {
@@ -70,29 +74,37 @@ h1 {
     padding-bottom: 20px;
 }
 
-a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #cbcbcb;
+p {
+    line-height: 1.6em;
 }
 
 a,
 a:link,
 a:visited,
 a:active {
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
-    border-bottom: 2px solid rgba(167, 0, 44, 1);
+}
+
+a:hover {
+    background-color: #faa61a;
 }
 
 .cem {
     font-family: 'Inconsolata';
-    color: #ababab;
+    color: #faa61a;
 }
 
-#linha {
+.linha {
     border-bottom: 1px solid #cbcbcb;
     max-width: 740px;
     margin: 20px 30px 20px 30px;
+}
+
+#logo{
+    float: right;
+    max-width: 120px;
+    margin: 0 20px;
 }
 
 
@@ -106,29 +118,15 @@ ul {
     margin: 0;
     padding: 10px;
     display: inline-block;
-    font-size: 1em;
+    font: 1.3em 'Inconsolata'; 
+    text-transform: uppercase;
     margin-right: 10px;
+    color: #fff;
+    background-color: #faa61a;
 }
 
 li:hover{
-    background-color: #cbcbcb;
-}
-
-#graficos {
-    color: #fff;
-    background-color: #000
-}
-
-#repercussoes {
-    background-color: rgba(112, 193, 179, 0.4)
-}
-
-#dados {
-    background-color: rgba(29, 53, 87, .4)
-}
-
-#ltempo {
-    background-color: rgba(250, 166, 26, .4)
+    background-color: #ababab;
 }
 
 
@@ -136,7 +134,7 @@ li:hover{
 
 .name-title {
     font-family: 'Noto Sans';
-    font-size: 3rem;
+    font-size: 2rem;
     fill: #fff;
     cursor: default;
     text-anchor: middle;
@@ -144,13 +142,13 @@ li:hover{
 
 .value-title {
     text-anchor: middle;
-    font-size: 2rem;
+    font-size: 1.8rem;
     fill: #cbcbcb;
 }
 
-.character-note {
+.descript {
     text-anchor: middle;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: 'Inconsolata';
     fill: #fff;
     /*	font-weight: 300;*/
@@ -164,7 +162,7 @@ li:hover{
 }
 
 .inner-label:hover {
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 .outer-label {
@@ -175,7 +173,79 @@ li:hover{
 }
 
 .outer-label-value {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: 'Inconsolata';
     fill: #cbcbcb;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #cbcbcb;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*Responsivo*/
+
+@media screen and (max-width: 720px) {
+    #chart {
+        width: 100%;
+    }
+    
+    #logo {
+        width: 80px;
+    }
+    
+    .legenda li{
+        display: block;
+        margin-bottom: 10px;
+        margin-bottom: 1px solid black;
+    }
+    
+    #creditoum{
+        line-height: 2em;
+    }
+    
+    #header{
+        margin: 0 25px;
+    }
 }

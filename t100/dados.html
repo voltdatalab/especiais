@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+	    <title>Michel Temer: polêmicas, políticas e repercussões</title>
+	    <meta name="author" content="Sérgio Spagnuolo">
+	    <meta name="description" content="Um balanço sobre os primeiros meses do presidente interino no poder">
+	    <meta name="keywords" content="política, Brasil, política brasileira, jornalismo de dados, data journalism, data visualization, volt data lab">
+		
+		<!-- fontes -->
+		<link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps|Macondo" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant:300,400" rel="stylesheet">
+		
+		<!-- estilos -->
+		<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Concepção</h1>
+
+<p>Este projeto foi feito a partir de um levantamento da agência de jornalismo <strong>Volt Data Lab</strong>.</p>
+
+<p>A ideia nos foi indicada por um potencial cliente o qual, após ver o resultado parcial da pesquisa, não se interessou em prosseguir e publicar o material. </p>
+
+<p>O Volt, no entanto, empenhado em fazer reportagens e levantamentos de potencial interesse público e que considera ter relevância, não quis abandonar o projeto e decidiu prosseguir para publicação por conta própria. </p>
+
+<h2>Metodologia</h2>
+
+<p>A pesquisa analisou cerca de 700 reportagens, notas e publicações da <a href="http://agenciabrasil.ebc.com.br">Agência Brasil</a> de 12 de maio a 22 de agosto nas quais o presidente interino Michel Temer foi citado. </p>
+
+<figure>
+<img src="https://c1.staticflickr.com/9/8469/28580610924_9c30ecca93_b.jpg" alt="100 dias Temer - Gráfico por Volt Data Lab" />
+<figcaption>100 dias Temer - Gráfico por Volt Data Lab</figcaption>
+</figure>
+
+<p>Foram realizadas buscas <sup><a href="#fn1-1769" id="fnr1-1769" title="see footnote" class="footnote">1</a></sup> no <a href="http://google.com">Google</a> com o nome de “Michel Temer”, levando em conta apenas material publicado no site da agência estatal de notícias. </p>
+
+<p>Matérias sem citar Temer diretamente texto das matérias foram desconsideradas, mesmo que envolvesse aliados, ministros ou políticas ligadas a ele. Às vezes o nome do presidente interino pode constar nos metadados da página, mas não necessariamente no conteúdo.</p>
+
+<p>Além disso, outras matérias como que as falam genericamente de governo ou medidas provisórias, por exemplo, sem citar Temer, também foram desconsideradas.</p>
+
+<p>Os critérios de escolha para selecionar a Agência Brasil como fonte foram: </p>
+
+<ol>
+<li>fonte aberta;</li>
+<li>isenção<sup><a href="#fn2-1769" id="fnr2-1769" title="see footnote" class="footnote">2</a></sup>;</li>
+<li>cobertura geral de assuntos de governo;</li>
+<li>não repetição exaustiva de de temas<sup><a href="#fn3-1769" id="fnr3-1769" title="see footnote" class="footnote">3</a></sup>.</li>
+</ol>
+
+<p>Embora alguns casos não tenham sido reportados pela Agência Brasil, é razoável considerar que a agência estatal faça uma cobertura bastante geral do governo, sendo possível, assim, chegar às conclusões da pesquisa.</p>
+
+<p>O conteúdo levantado foi classificado em cinco categorias principais e nove subcategorias, escolhidas após primeira análise do material, buscando sempre a neutralidade na escolha.</p>
+
+<p>São as categorias: </p>
+
+<ol>
+<li><strong>Polêmicas</strong> = controvérsias envolvendo Michel Temer, integrantes do governo ou políticas federais;</li>
+<li><strong>Políticas</strong> = questões envolvendo políticas públicas a respeito de diversos temas, como econômicos, sociais, ambientais etc. promovidos pelo governo federal e seus membros;</li>
+<li><strong>Repercussões</strong> = reflexões, comentários gerais, opiniões, manifestações sobre o governo interino ou sobre o presidente interino por interlocutores de fora do Executivo, seja a neutro/indefinido, a favor ou contra ele;</li>
+<li><strong>Nomeações</strong> = indicações ou exonerações feitas por Michel Temer para cargos federais e articulações para posições no Congresso;</li>
+<li><strong>Perspectivas no governo</strong> = situação atual, previsões, interesses declarados, comentários gerais, promessas, declarações gerais, posicionamentos, itens de itinerário do presidente e do governo e planos não concretos por membros do governo.</li>
+</ol>
+
+<p>São as subcategorias: </p>
+
+<ol>
+<li><strong>Base Aliada</strong> = item relativo a questões políticas do governo no Congresso;</li>
+<li><strong>Cortes &amp; Revisões</strong> = relativo a revisões (para cima ou para baixo) de programas existentes e cortes orçamentários, por exemplo;</li>
+<li><strong>Ministros &amp; Cargos</strong> = relativo a questões sobre ministérios e ministros e indicados a cargos no governo federal e estatais como sujeitos ativos, como por exemplo a questões relacionadas a eles mesmos, como polêmicas, nomeações, expectativas sobre o cargo e interesses, ou a discussões sobre políticas gerais etc;</li>
+<li><strong>Novas Políticas</strong> = relativo a novos programas, ações e medidas do novo governo;</li>
+<li><strong>Políticas Existentes</strong> = relativo à manutenção de programas, planos e políticas existentes, sem revisões ou cortes;</li>
+<li><strong>Protestos</strong> = relativo a manifestações contra o governo por grupo de pessoas;</li>
+<li><strong>Impeachment</strong> = relativo a repercussões relacionadas ao impeachment de Dilma Rousseff;</li>
+<li><strong>Temer</strong> = tópico relativo diretamente a Michel Temer como sujeito ativo em assuntos gerais;</li>
+<li><strong>Outros</strong> = todo o resto que não cabe nas subcategorias mencionadas;</li>
+</ol>
+
+<h2>Gráficos</h2>
+
+<p>O gráfico principal foi feito em <a href="http://d3js.org">D3.js</a> a partir da sensacional <a href="http://www.visualcinnamon.com/portfolio/words-lord-of-the-rings">adaptação</a> do chamado “diagrama de cordas” feita por <a href="https://twitter.com/NadiehBremer">Nadieh Bremer</a>, do <a href="http://www.visualcinnamon.com/">Visual Cinnamon</a>.</p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn1-1769">
+<p>A busca exata considerada foi: <code>”Michel Temer” site:http://agenciabrasil.ebc.com.br</code> <a href="#fnr1-1769" title="return to article" class="reversefootnote">&#8617;&#xFE0E;</a></p>
+</li>
+
+<li id="fn2-1769">
+<p>Embora a própria agência seja motivo de polêmica envolvendo a indicação do jornalista Ricardo Mello, é possível dizer que o tom das matérias é isento. <a href="#fnr2-1769" title="return to article" class="reversefootnote">&#8617;&#xFE0E;</a></p>
+</li>
+
+<li id="fn3-1769">
+<p>A repetição exaustiva de temas pode ser afetar o levantamentos de casos únicos. Por exemplo, falar todo dia sobre o afastamento de Romero Jucá do Ministério do Planejamento não significa que cada nova matéria trata de casos diferentes, e sim explora o mesmo caso com diferentes ângulos - de toda forma, é o mesmo caso <a href="#fnr3-1769" title="return to article" class="reversefootnote">&#8617;&#xFE0E;</a></p>
+</li>
+
+</ol>
+</div>
+
+</body>
+</html>
