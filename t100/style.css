@@ -101,8 +101,8 @@ a:hover {
 
 #logo {
     float: right;
-    max-width: 120px;
-    margin: 0 20px;
+    max-width: 90px;
+    margin: 10px 20px;
 }
 
 
@@ -247,7 +247,7 @@ li:hover {
         width: 100%;
     }
     #logo {
-        width: 80px;
+        width: 70px;
     }
     .legenda li {
         display: block;
