@@ -113,10 +113,6 @@ a:active {
     color: #faa61a ;
 }
 
-a:hover {
-    background-color: #faa61a;
-}
-
 .cem {
     font-family: 'Merriweather';
     color: #faa61a;
@@ -323,9 +319,6 @@ ol {
     }
     .creditoum {
         line-height: 2em;
-    }
-    #header {
-        margin: 0 20px;
     }
     #middle {
     background-color: #cbcbcb;
