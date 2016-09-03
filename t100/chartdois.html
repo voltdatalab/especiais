@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Generated with d3-generator.com -->
+<html>
+  <head>
+     <title>100 dias de Temer - gráfico</title>
+     <meta http-equiv="X-UA-Compatible" content="IE=9">
+      
+      <style>
+      @import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700';
+          
+          body{
+              font-family: 'Inconsolata';
+              color: #fff
+          }
+          
+          h3{
+              text-transform: uppercase;
+          }
+          
+          .sources {
+    font-size: 12px;
+    max-width: 300px;
+    margin: 15px 30px 5px 30px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+      </style>
+  </head>
+  <body>
+      <h3>O que a Agência Brasil publicou sobre Temer  </h3>
+    <div id="chart"></div>
+      <h4 class="sources">FONTE: Levantamento do Volt Data Lab com cerca de 700 publicações da Agência Brasil de 12 de maio a 22 de agosto de 2016</h4>
+    <script src="http://d3js.org/d3.v2.min.js"></script>
+    <script>
+function renderChart() {
+
+var data = d3.csv.parse(d3.select('#csv').text());
+var valueLabelWidth = 40; // space reserved for value labels (right)
+var barHeight = 20; // height of one bar
+var barLabelWidth = 100; // space reserved for bar labels
+var barLabelPadding = 5; // padding between bar and bar labels (left)
+var gridLabelHeight = 18; // space reserved for gridline labels
+var gridChartOffset = 3; // space between start of grid and first bar
+var maxBarWidth = 420; // width of the bar with the max value
+ 
+// accessor functions 
+var barLabel = function(d) { return d['tipo']; };
+var barValue = function(d) { return parseFloat(d['   percentual']); };
+ 
+// sorting
+var sortedData = data.sort(function(a, b) {
+ return d3.descending(barValue(a), barValue(b));
+}); 
+
+// scales
+var yScale = d3.scale.ordinal().domain(d3.range(0, sortedData.length)).rangeBands([0, sortedData.length * barHeight]);
+var y = function(d, i) { return yScale(i); };
+var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
+var x = d3.scale.linear().domain([0, d3.max(sortedData, barValue)]).range([0, maxBarWidth]);
+// svg container element
+var chart = d3.select('#chart').append("svg")
+    .attr("viewBox", "0 0 600 150");
+  //.attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
+  //.attr('height', gridLabelHeight + gridChartOffset + sortedData.length * barHeight);
+// grid line labels
+var gridContainer = chart.append('g')
+  .attr('transform', 'translate(' + barLabelWidth + ',' + gridLabelHeight + ')'); 
+gridContainer.selectAll("text").data(x.ticks(10)).enter().append("text")
+  .attr("x", x)
+  .attr("dy", -3)
+  .style("font", "16px Inconsolata")
+.style("fill", "#fff")
+  .attr("text-anchor", "middle")
+  .text(String);
+    gridContainer.append("text")
+  .attr("x", 390)
+  .attr("dy", -3)
+    .style("fill", "#fff")
+    .text("%");
+// vertical grid lines
+gridContainer.selectAll("line").data(x.ticks(10)).enter().append("line")
+  .attr("x1", x)
+  .attr("x2", x)
+  .attr("y1", 0)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#fff");
+// bar labels
+var labelsContainer = chart.append('g')
+  .attr('transform', 'translate(' + (barLabelWidth - barLabelPadding) + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+labelsContainer.selectAll('text').data(sortedData).enter().append('text')
+  .attr('y', yText)
+  .attr('stroke', 'none')
+  .attr('fill', 'black')
+    .style("font", "16px Inconsolata")
+    .style("fill", "#fff")
+  .attr("dy", ".35em") // vertical-align: middle
+  .attr('text-anchor', 'end')
+  .text(barLabel);
+// bars
+var barsContainer = chart.append('g')
+  .attr('transform', 'translate(' + barLabelWidth + ',' + (gridLabelHeight + gridChartOffset) + ')'); 
+barsContainer.selectAll("rect").data(sortedData).enter().append("rect")
+  .attr('y', y)
+  .attr('height', yScale.rangeBand())
+  .attr('width', function(d) { return x(barValue(d)); })
+  .attr('stroke', 'white')
+  .attr('fill', '#faa61a');
+// bar value labels
+//barsContainer.selectAll("text").data(sortedData).enter().append("text")
+  //.attr("x", function(d) { return x(barValue(d)); })
+  //.attr("y", yText)
+  //.attr("dx", 3) // padding-left
+  //.attr("dy", ".35em") // vertical-align: middle
+  //.attr("text-anchor", "start") // text-align: right
+  //.attr("fill", "black")
+  //.attr("stroke", "none")
+  //.text(function(d) { return d3.round(barValue(d), 2); });
+// start line
+barsContainer.append("line")
+  .attr("y1", -gridChartOffset)
+  .attr("y2", yScale.rangeExtent()[1] + gridChartOffset)
+  .style("stroke", "#000");
+    
+}
+    </script>
+    <script id="csv" type="text/csv">tipo,   percentual
+Declarações,    19.88
+Nomeações,	10.52
+Polêmicas,	12.82
+Políticas,	18.01
+Repercussões,	38.76</script>
+    <script>renderChart();</script>
+  </body>
+</html>

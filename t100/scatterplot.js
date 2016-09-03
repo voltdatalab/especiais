@@ -1,7 +1,7 @@
 var margin = {
-    top: 20,
+    top: 30,
     right: 0,
-    bottom: 140,
+    bottom: 130,
     left: 40
   },
   width = 600 - margin.left - margin.right,
@@ -47,7 +47,7 @@ var cValue = function(d) {
 var svg = d3.select("#scatter").append("svg")
 //  .attr("width", width + margin.left + margin.right)
 //  .attr("height", height + margin.top + margin.bottom)
-  .attr("viewBox", "0 0 800 500")
+  .attr("viewBox", "0 0 650 500")
   .append("g")
   .style("font", "14px Inconsolata")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -75,7 +75,7 @@ var tooltip = d3.select("body").append("div")
   .style("opacity", 0);
 
 // load data
-d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100.csv", 
+d3.csv("/dados/dados_cat.csv", 
        function(error, data) {
 
   // CSV pra número
@@ -92,11 +92,14 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
+    .style("fill", "#fff")
+    .style("font", "16px Inconsolata")
     .call(xAxis)
     .append("text")
     .attr("class", "label")
     .attr("x", width)
     .attr("y", -6)
+    .style("fill", "#fff")
     .style("text-anchor", "end")
     .style("font", "16px Inconsolata")
     .text("");
@@ -112,6 +115,8 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100
   // y
   svg.append("g")
     .attr("class", "y axis")
+    .style("fill", "#fff")
+    .style("font", "16px Inconsolata")
     .call(yAxis)
     .append("text")
     .attr("class", "label")
@@ -119,7 +124,7 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .style("font", "16px Inconsolata")
+    
     .text("Matérias publicadas");
 
   // pontos
@@ -139,7 +144,7 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100
         .duration(50)
         .attr("min-height", "120px")
         .style("opacity", 1)
-        .style("background-color", "rgba(255,255,255,.8)")
+        .style("background-color", "rgba(0,0,0,.8)")
         .style("font", "14px Inconsolata")
         .style("padding", "10px");
 
@@ -178,7 +183,8 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/politica/t100
     .attr("x", width - 24)
     .attr("y", 9)
     .attr("dy", ".35em")
-    .style("font", "18px Inconsolata")
+    .style("fill", "#fff")
+    .style("font", "16px Inconsolata")
     .style("text-anchor", "end")
     .text(function(d) {
       return d;

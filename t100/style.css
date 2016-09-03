@@ -1,21 +1,39 @@
-@import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Noto+Sans';
-html {
-    font-size: 100%;
-}
+@import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700';
 
 body {
-    font-family: 'Noto Sans', serif;
-    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
     color: white;
-    background-color: rgba(0, 0, 0, .8);
+    letter-spacing: .5px;
+    background-color: #444;
+    margin: 0;
+    padding: 0;
 }
 
-#header {}
+#header {
+    background-color: #a7000c;
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
-    font-family: 'Inconsolata';
+    font-family: 'Merriweather';
     text-transform: uppercase;
     margin-bottom: 20px
+}
+
+h3 {
+    font-family: 'Inconsolata';
+    font-size: 1.8em
+}
+
+h5 {
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.social{
+    margin-top: 30px; 
 }
 
 .content-wrapper {
@@ -24,26 +42,26 @@ h1 {
 }
 
 #titulo {
-    font-size: 50px;
+    font-size: 4em;
     font-weight: 700;
-    margin: 40px 30px 10px 30px;
+    margin: 40px 30px 30px 30px;
 }
 
 #subtitulo {
-    font-size: 22px;
+    font-size: 3em;
     font-family: 'Inconsolata';
-    margin: 0px 30px 20px 30px;
+    margin: 0px 30px 10px 30px;
     font-weight: 300;
 }
 
-#intro {
+.intro {
     font-size: 16px;
     margin: 0px 30px 10px 30px;
     max-width: 800px;
 }
 
 #note {
-    font: 1.6em 'Inconsolata';
+    font: 1.5em 'Inconsolata';
     margin: 0px 30px 10px 30px;
     max-width: 800px;
     font-weight: 700;
@@ -64,16 +82,27 @@ h1 {
     margin: 10px 30px 5px 30px;
 }
 
-#sources {
+#menuin{
+    margin: 0 auto;
+    font-size: 16px;
+    margin: 60px;
+    text-align: center
+}
+
+.sources {
     font-size: 1.2em;
     max-width: 300px;
     margin: 15px 30px 5px 30px;
     font-weight: 300;
-    padding-bottom: 20px;
 }
 
 p {
     line-height: 1.6em;
+    margin-bottom: 25px;
+}
+
+strong{
+    color: #cdcdcd
 }
 
 a,
@@ -81,7 +110,7 @@ a:link,
 a:visited,
 a:active {
     text-decoration: underline;
-    color: white;
+    color: #faa61a ;
 }
 
 a:hover {
@@ -89,14 +118,14 @@ a:hover {
 }
 
 .cem {
-    font-family: 'Inconsolata';
+    font-family: 'Merriweather';
     color: #faa61a;
 }
 
 .linha {
     border-bottom: 1px solid #cbcbcb;
-    max-width: 740px;
-    margin: 20px 30px 20px 30px;
+    max-width: 100%;
+    margin: 60px 0px 40px;
 }
 
 #logo {
@@ -105,25 +134,63 @@ a:hover {
     margin: 10px 20px;
 }
 
+#middle {
+    background-color: #cbcbcb;
+    color: #000;
+    padding: 20px 20px 40px;
+    position: relative;
+    margin: 20px 30px 20px 0;
+    float: left;
+    max-width: 300px;
+}
+
+#middle a{
+    color: #666;
+}
+
+.banner {
+    padding-top: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.way_head{
+    text-align: center;
+}
 
 /* Lista menu */
 
 ul {
     padding: 0;
+    line-height: 1.7em;
+}
+
+ol {
+    line-height: 1.7em;
 }
 
 .legenda li {
     margin: 0;
     padding: 10px;
     display: inline-block;
-    font: 1.3em 'Inconsolata';
-    text-transform: uppercase;
+    font: 1em 'Merriweather';
+    text-transform: capitalize;
     margin-right: 10px;
     color: #fff;
     background-color: #faa61a;
 }
 
-li:hover {
+.legenda a{
+    color: white;
+    text-decoration: none;
+}
+
+.legenda a:hover{
+    background-color: #ababab;
+}
+
+.item_legenda:hover {
     background-color: #ababab;
 }
 
@@ -131,8 +198,8 @@ li:hover {
 /*--- chart ---*/
 
 .name-title {
-    font-family: 'Noto Sans';
-    font-size: 2rem;
+    font-family: 'Merriweather';
+    font-size: 1.7rem;
     fill: #fff;
     cursor: default;
     text-anchor: middle;
@@ -140,31 +207,31 @@ li:hover {
 
 .value-title {
     text-anchor: middle;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     fill: #cbcbcb;
 }
 
 .descript {
     text-anchor: middle;
     font-size: 1.3rem;
-    font-family: 'Inconsolata';
+    font-family: 'Merriweather';
     fill: #fff;
     /*	font-weight: 300;*/
 }
 
 .inner-label {
-    font-family: 'Inconsolata';
-    font-size: 1.7rem;
+    font-family: 'Merriweather';
+    font-size: 1.4rem;
     fill: #fff;
     cursor: default;
 }
 
 .inner-label:hover {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 
 .outer-label {
-    font-family: 'Inconsolata';
+    font-family: 'Merriweather';
     font-size: 1.4rem;
     fill: #fff;
     cursor: default;
@@ -172,7 +239,7 @@ li:hover {
 
 .outer-label-value {
     font-size: 1rem;
-    font-family: 'Inconsolata';
+    font-family: 'Merriweather';
     fill: #cbcbcb;
 }
 
@@ -254,10 +321,18 @@ li:hover {
         margin-bottom: 10px;
         margin-bottom: 1px solid black;
     }
-    #creditoum {
+    .creditoum {
         line-height: 2em;
     }
     #header {
         margin: 0 20px;
     }
+    #middle {
+    background-color: #cbcbcb;
+    margin: 20px 0;
+        max-width: 500px; }
+    #grafdois{
+           max-height: 720px; 
+        }
+    
 }

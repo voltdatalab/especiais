@@ -1,4 +1,4 @@
-var margin = {left:200, top:20, right:120, bottom:100},
+var margin = {left:200, top:70, right:120, bottom:100},
 	width = Math.max( Math.min(window.innerWidth, 1100) - margin.left - margin.right - 20, 400),
     height = Math.max( Math.min(window.innerHeight - 250, 900) - margin.top - margin.bottom - 20, 400),
     innerRadius = Math.min(width * 0.25, height * .45),
@@ -47,7 +47,9 @@ var string = string()
 var descricao = [];
 descricao["Polêmicas"] = "Controvérsias envolvendo Michel Temer, integrantes do governo ou políticas federais.";
 descricao["Políticas"] = "Questões sobre políticas públicas em diversos temas, como econômicos, sociais etc. promovidos pelo governo federal e seus membros.";
-descricao["Repercussões"] = "Reflexões, comentários gerais e manifestações a respeito do governo interino por interlocutores de fora do Executivo.";
+descricao["Rep. Negativas"] = "Reflexões, comentários gerais e manifestações negativas a respeito do governo interino por interlocutores de fora do Executivo.";
+descricao["Rep. Neutras"] = "Reflexões, comentários gerais e manifestações neutras a respeito do governo interino por interlocutores de fora do Executivo.";
+descricao["Rep. Positivas"] = "Reflexões, comentários gerais e manifestações positivas a respeito do governo interino por interlocutores de fora do Executivo.";
 descricao["Nomeações"] = "Indicações ou exonerações realizadas por Michel Temer para cargos federais, articulações para posições no Congresso.";
 descricao["Declarações"] = "Reflexões e comentários gerais de dentro do Executivo sobre a situação do país, previsões, promessas, itens de itinerário etc.";
 
@@ -56,7 +58,7 @@ descricao["Declarações"] = "Reflexões e comentários gerais de dentro do Exec
 ////////////////////////////////////////////////////////////
 			
 var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 1200 600");
+    .attr("viewBox", "0 0 1200 700");
     //.attr("width", width + margin.left + margin.right)
     //.attr("height", height + margin.top + margin.bottom);
 
@@ -64,7 +66,7 @@ var svg = d3.select("#chart").append("svg")
 ///////////////////// Read in data /////////////////////////
 ////////////////////////////////////////////////////////////
 			
-d3.json('dados.json', function (error, dataAgg) {
+d3.json('/dados/dados.json', function (error, dataAgg) {
 
 	////////////////////////////////////////////////////////////
 	///////////////////// Prepare the data /////////////////////
@@ -214,7 +216,7 @@ d3.json('dados.json', function (error, dataAgg) {
 	outerLabels.append("text")
 		.attr("class", "outer-label-value")
 		.attr("dy", "1.5em")
-		.text(function(d,i){ return numFormat(d.value) + " matérias"; });
+		.text(function(d,i){ return numFormat(d.value) + " headlines"; });
 
 	////////////////////////////////////////////////////////////
 	////////////////// Draw inner strings //////////////////////
@@ -273,7 +275,7 @@ d3.json('dados.json', function (error, dataAgg) {
 					} else {
 						var value = loc[0].outer.value;
 					}
-					return numFormat(value) + (value === 1 ? " matérias" : " matérias"); 
+					return numFormat(value) + (value === 1 ? " headlines" : " headlines"); 
 					
 				});
 			
@@ -295,7 +297,7 @@ d3.json('dados.json', function (error, dataAgg) {
 			d3.select(".value-title")
 				.text(function() {
 					var headlines = dataChar.filter(function(s) { return s.key === d.name ; });
-					return numFormat(headlines[0].value) + " matérias";
+					return numFormat(headlines[0].value) + " ocorrências";
 				});
 				
 			//Show the character note

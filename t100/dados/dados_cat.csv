@@ -1,0 +1,344 @@
+data,dataus,headlines,categoria
+12/05/2016,05/12/2016,18,Nomeações
+12/05/2016,05/12/2016,13,Repercussões Negativas
+13/05/2016,05/13/2016,8,Repercussões Negativas
+18/05/2016,05/18/2016,8,Repercussões Negativas
+12/05/2016,05/12/2016,8,Repercussões Positivas
+12/05/2016,05/12/2016,7,Declarações
+12/07/2016,07/12/2016,6,Políticas
+15/05/2016,05/15/2016,6,Repercussões Negativas
+17/05/2016,05/17/2016,6,Repercussões Negativas
+10/06/2016,06/10/2016,6,Repercussões Negativas
+01/06/2016,06/01/2016,5,Declarações
+17/05/2016,05/17/2016,5,Polêmicas
+15/06/2016,06/15/2016,5,Políticas
+16/05/2016,05/16/2016,5,Repercussões Negativas
+23/05/2016,05/23/2016,5,Repercussões Negativas
+12/05/2016,05/12/2016,5,Repercussões Neutras
+05/08/2016,08/05/2016,5,Repercussões Neutras
+16/05/2016,05/16/2016,4,Declarações
+18/05/2016,05/18/2016,4,Declarações
+07/06/2016,06/07/2016,4,Declarações
+23/06/2016,06/23/2016,4,Declarações
+05/08/2016,08/05/2016,4,Declarações
+18/05/2016,05/18/2016,4,Nomeações
+12/05/2016,05/12/2016,4,Polêmicas
+13/05/2016,05/13/2016,4,Polêmicas
+30/05/2016,05/30/2016,4,Polêmicas
+16/06/2016,06/16/2016,4,Polêmicas
+13/05/2016,05/13/2016,4,Políticas
+16/05/2016,05/16/2016,4,Políticas
+24/05/2016,05/24/2016,4,Políticas
+02/06/2016,06/02/2016,4,Políticas
+28/06/2016,06/28/2016,4,Políticas
+29/06/2016,06/29/2016,4,Políticas
+06/07/2016,07/06/2016,4,Políticas
+25/07/2016,07/25/2016,4,Políticas
+16/08/2016,08/16/2016,4,Repercussões Negativas
+17/05/2016,05/17/2016,4,Repercussões Neutras
+08/06/2016,06/08/2016,4,Repercussões Neutras
+13/07/2016,07/13/2016,4,Repercussões Neutras
+02/08/2016,08/02/2016,4,Repercussões Neutras
+17/05/2016,05/17/2016,3,Declarações
+19/05/2016,05/19/2016,3,Declarações
+20/05/2016,05/20/2016,3,Declarações
+31/05/2016,05/31/2016,3,Declarações
+15/06/2016,06/15/2016,3,Declarações
+16/06/2016,06/16/2016,3,Declarações
+20/06/2016,06/20/2016,3,Declarações
+28/06/2016,06/28/2016,3,Declarações
+14/07/2016,07/14/2016,3,Declarações
+01/08/2016,08/01/2016,3,Declarações
+04/08/2016,08/04/2016,3,Declarações
+12/08/2016,08/12/2016,3,Declarações
+17/05/2016,05/17/2016,3,Nomeações
+24/05/2016,05/24/2016,3,Nomeações
+19/05/2016,05/19/2016,3,Polêmicas
+20/05/2016,05/20/2016,3,Polêmicas
+25/05/2016,05/25/2016,3,Polêmicas
+02/06/2016,06/02/2016,3,Polêmicas
+03/06/2016,06/03/2016,3,Polêmicas
+07/06/2016,06/07/2016,3,Polêmicas
+15/06/2016,06/15/2016,3,Polêmicas
+23/06/2016,06/23/2016,3,Polêmicas
+24/06/2016,06/24/2016,3,Polêmicas
+12/05/2016,05/12/2016,3,Políticas
+17/05/2016,05/17/2016,3,Políticas
+18/05/2016,05/18/2016,3,Políticas
+19/05/2016,05/19/2016,3,Políticas
+08/06/2016,06/08/2016,3,Políticas
+30/06/2016,06/30/2016,3,Políticas
+01/07/2016,07/01/2016,3,Políticas
+05/07/2016,07/05/2016,3,Políticas
+26/07/2016,07/26/2016,3,Políticas
+29/07/2016,07/29/2016,3,Políticas
+01/08/2016,08/01/2016,3,Políticas
+19/05/2016,05/19/2016,3,Repercussões Negativas
+24/05/2016,05/24/2016,3,Repercussões Negativas
+25/05/2016,05/25/2016,3,Repercussões Negativas
+02/06/2016,06/02/2016,3,Repercussões Negativas
+16/06/2016,06/16/2016,3,Repercussões Negativas
+06/07/2016,07/06/2016,3,Repercussões Negativas
+31/07/2016,07/31/2016,3,Repercussões Negativas
+05/08/2016,08/05/2016,3,Repercussões Negativas
+18/05/2016,05/18/2016,3,Repercussões Neutras
+29/06/2016,06/29/2016,3,Repercussões Neutras
+06/07/2016,07/06/2016,3,Repercussões Neutras
+13/05/2016,05/13/2016,2,Declarações
+14/05/2016,05/14/2016,2,Declarações
+15/05/2016,05/15/2016,2,Declarações
+21/05/2016,05/21/2016,2,Declarações
+30/05/2016,05/30/2016,2,Declarações
+08/06/2016,06/08/2016,2,Declarações
+10/06/2016,06/10/2016,2,Declarações
+17/06/2016,06/17/2016,2,Declarações
+22/06/2016,06/22/2016,2,Declarações
+30/06/2016,06/30/2016,2,Declarações
+04/07/2016,07/04/2016,2,Declarações
+05/07/2016,07/05/2016,2,Declarações
+07/07/2016,07/07/2016,2,Declarações
+13/07/2016,07/13/2016,2,Declarações
+19/07/2016,07/19/2016,2,Declarações
+26/07/2016,07/26/2016,2,Declarações
+27/07/2016,07/27/2016,2,Declarações
+06/08/2016,08/06/2016,2,Declarações
+11/08/2016,08/11/2016,2,Declarações
+18/08/2016,08/18/2016,2,Declarações
+13/05/2016,05/13/2016,2,Nomeações
+16/05/2016,05/16/2016,2,Nomeações
+20/05/2016,05/20/2016,2,Nomeações
+30/05/2016,05/30/2016,2,Nomeações
+31/05/2016,05/31/2016,2,Nomeações
+03/06/2016,06/03/2016,2,Nomeações
+09/06/2016,06/09/2016,2,Nomeações
+20/06/2016,06/20/2016,2,Nomeações
+21/06/2016,06/21/2016,2,Nomeações
+05/07/2016,07/05/2016,2,Nomeações
+07/07/2016,07/07/2016,2,Nomeações
+11/07/2016,07/11/2016,2,Nomeações
+12/07/2016,07/12/2016,2,Nomeações
+13/07/2016,07/13/2016,2,Nomeações
+23/05/2016,05/23/2016,2,Polêmicas
+24/05/2016,05/24/2016,2,Polêmicas
+31/05/2016,05/31/2016,2,Polêmicas
+08/06/2016,06/08/2016,2,Polêmicas
+17/06/2016,06/17/2016,2,Polêmicas
+22/06/2016,06/22/2016,2,Polêmicas
+13/07/2016,07/13/2016,2,Polêmicas
+04/08/2016,08/04/2016,2,Polêmicas
+11/08/2016,08/11/2016,2,Polêmicas
+25/05/2016,05/25/2016,2,Políticas
+31/05/2016,05/31/2016,2,Políticas
+06/06/2016,06/06/2016,2,Políticas
+16/06/2016,06/16/2016,2,Políticas
+20/06/2016,06/20/2016,2,Políticas
+21/06/2016,06/21/2016,2,Políticas
+23/06/2016,06/23/2016,2,Políticas
+07/07/2016,07/07/2016,2,Políticas
+08/07/2016,07/08/2016,2,Políticas
+20/07/2016,07/20/2016,2,Políticas
+21/07/2016,07/21/2016,2,Políticas
+22/07/2016,07/22/2016,2,Políticas
+08/08/2016,08/08/2016,2,Políticas
+15/08/2016,08/15/2016,2,Políticas
+16/08/2016,08/16/2016,2,Políticas
+19/08/2016,08/19/2016,2,Políticas
+20/05/2016,05/20/2016,2,Repercussões Negativas
+22/05/2016,05/22/2016,2,Repercussões Negativas
+29/05/2016,05/29/2016,2,Repercussões Negativas
+06/06/2016,06/06/2016,2,Repercussões Negativas
+27/06/2016,06/27/2016,2,Repercussões Negativas
+29/06/2016,06/29/2016,2,Repercussões Negativas
+30/06/2016,06/30/2016,2,Repercussões Negativas
+11/07/2016,07/11/2016,2,Repercussões Negativas
+21/07/2016,07/21/2016,2,Repercussões Negativas
+25/07/2016,07/25/2016,2,Repercussões Negativas
+26/07/2016,07/26/2016,2,Repercussões Negativas
+28/07/2016,07/28/2016,2,Repercussões Negativas
+04/08/2016,08/04/2016,2,Repercussões Negativas
+09/08/2016,08/09/2016,2,Repercussões Negativas
+16/05/2016,05/16/2016,2,Repercussões Neutras
+31/05/2016,05/31/2016,2,Repercussões Neutras
+16/06/2016,06/16/2016,2,Repercussões Neutras
+20/06/2016,06/20/2016,2,Repercussões Neutras
+05/07/2016,07/05/2016,2,Repercussões Neutras
+12/07/2016,07/12/2016,2,Repercussões Neutras
+27/07/2016,07/27/2016,2,Repercussões Neutras
+28/07/2016,07/28/2016,2,Repercussões Neutras
+01/08/2016,08/01/2016,2,Repercussões Neutras
+03/08/2016,08/03/2016,2,Repercussões Neutras
+09/08/2016,08/09/2016,2,Repercussões Neutras
+10/08/2016,08/10/2016,2,Repercussões Neutras
+16/08/2016,08/16/2016,2,Repercussões Neutras
+18/08/2016,08/18/2016,2,Repercussões Neutras
+02/06/2016,06/02/2016,2,Repercussões Positivas
+22/05/2016,05/22/2016,1,Declarações
+23/05/2016,05/23/2016,1,Declarações
+24/05/2016,05/24/2016,1,Declarações
+25/05/2016,05/25/2016,1,Declarações
+02/06/2016,06/02/2016,1,Declarações
+05/06/2016,06/05/2016,1,Declarações
+09/06/2016,06/09/2016,1,Declarações
+11/06/2016,06/11/2016,1,Declarações
+12/06/2016,06/12/2016,1,Declarações
+19/06/2016,06/19/2016,1,Declarações
+21/06/2016,06/21/2016,1,Declarações
+27/06/2016,06/27/2016,1,Declarações
+29/06/2016,06/29/2016,1,Declarações
+08/07/2016,07/08/2016,1,Declarações
+12/07/2016,07/12/2016,1,Declarações
+15/07/2016,07/15/2016,1,Declarações
+17/07/2016,07/17/2016,1,Declarações
+18/07/2016,07/18/2016,1,Declarações
+20/07/2016,07/20/2016,1,Declarações
+29/07/2016,07/29/2016,1,Declarações
+30/07/2016,07/30/2016,1,Declarações
+31/07/2016,07/31/2016,1,Declarações
+02/08/2016,08/02/2016,1,Declarações
+03/08/2016,08/03/2016,1,Declarações
+08/08/2016,08/08/2016,1,Declarações
+09/08/2016,08/09/2016,1,Declarações
+10/08/2016,08/10/2016,1,Declarações
+16/08/2016,08/16/2016,1,Declarações
+19/08/2016,08/19/2016,1,Declarações
+22/08/2016,08/22/2016,1,Declarações
+19/05/2016,05/19/2016,1,Nomeações
+23/05/2016,05/23/2016,1,Nomeações
+25/05/2016,05/25/2016,1,Nomeações
+27/05/2016,05/27/2016,1,Nomeações
+01/06/2016,06/01/2016,1,Nomeações
+06/06/2016,06/06/2016,1,Nomeações
+07/06/2016,06/07/2016,1,Nomeações
+08/06/2016,06/08/2016,1,Nomeações
+13/06/2016,06/13/2016,1,Nomeações
+17/06/2016,06/17/2016,1,Nomeações
+24/06/2016,06/24/2016,1,Nomeações
+28/06/2016,06/28/2016,1,Nomeações
+04/07/2016,07/04/2016,1,Nomeações
+08/07/2016,07/08/2016,1,Nomeações
+10/07/2016,07/10/2016,1,Nomeações
+05/08/2016,08/05/2016,1,Nomeações
+09/08/2016,08/09/2016,1,Nomeações
+15/05/2016,05/15/2016,1,Polêmicas
+16/05/2016,05/16/2016,1,Polêmicas
+21/05/2016,05/21/2016,1,Polêmicas
+27/05/2016,05/27/2016,1,Polêmicas
+01/06/2016,06/01/2016,1,Polêmicas
+05/06/2016,06/05/2016,1,Polêmicas
+06/06/2016,06/06/2016,1,Polêmicas
+09/06/2016,06/09/2016,1,Polêmicas
+10/06/2016,06/10/2016,1,Polêmicas
+13/06/2016,06/13/2016,1,Polêmicas
+20/06/2016,06/20/2016,1,Polêmicas
+21/06/2016,06/21/2016,1,Polêmicas
+28/06/2016,06/28/2016,1,Polêmicas
+29/06/2016,06/29/2016,1,Polêmicas
+04/07/2016,07/04/2016,1,Polêmicas
+06/07/2016,07/06/2016,1,Polêmicas
+08/07/2016,07/08/2016,1,Polêmicas
+20/07/2016,07/20/2016,1,Polêmicas
+21/07/2016,07/21/2016,1,Polêmicas
+27/07/2016,07/27/2016,1,Polêmicas
+05/08/2016,08/05/2016,1,Polêmicas
+15/08/2016,08/15/2016,1,Polêmicas
+18/08/2016,08/18/2016,1,Polêmicas
+14/05/2016,05/14/2016,1,Políticas
+20/05/2016,05/20/2016,1,Políticas
+27/05/2016,05/27/2016,1,Políticas
+01/06/2016,06/01/2016,1,Políticas
+07/06/2016,06/07/2016,1,Políticas
+14/06/2016,06/14/2016,1,Políticas
+26/06/2016,06/26/2016,1,Políticas
+27/06/2016,06/27/2016,1,Políticas
+03/07/2016,07/03/2016,1,Políticas
+11/07/2016,07/11/2016,1,Políticas
+13/07/2016,07/13/2016,1,Políticas
+14/07/2016,07/14/2016,1,Políticas
+30/07/2016,07/30/2016,1,Políticas
+31/07/2016,07/31/2016,1,Políticas
+09/08/2016,08/09/2016,1,Políticas
+11/08/2016,08/11/2016,1,Políticas
+14/08/2016,08/14/2016,1,Políticas
+14/05/2016,05/14/2016,1,Repercussões Negativas
+21/05/2016,05/21/2016,1,Repercussões Negativas
+30/05/2016,05/30/2016,1,Repercussões Negativas
+31/05/2016,05/31/2016,1,Repercussões Negativas
+01/06/2016,06/01/2016,1,Repercussões Negativas
+07/06/2016,06/07/2016,1,Repercussões Negativas
+08/06/2016,06/08/2016,1,Repercussões Negativas
+09/06/2016,06/09/2016,1,Repercussões Negativas
+11/06/2016,06/11/2016,1,Repercussões Negativas
+14/06/2016,06/14/2016,1,Repercussões Negativas
+17/06/2016,06/17/2016,1,Repercussões Negativas
+24/06/2016,06/24/2016,1,Repercussões Negativas
+26/06/2016,06/26/2016,1,Repercussões Negativas
+28/06/2016,06/28/2016,1,Repercussões Negativas
+01/07/2016,07/01/2016,1,Repercussões Negativas
+02/07/2016,07/02/2016,1,Repercussões Negativas
+04/07/2016,07/04/2016,1,Repercussões Negativas
+07/07/2016,07/07/2016,1,Repercussões Negativas
+08/07/2016,07/08/2016,1,Repercussões Negativas
+17/07/2016,07/17/2016,1,Repercussões Negativas
+20/07/2016,07/20/2016,1,Repercussões Negativas
+03/08/2016,08/03/2016,1,Repercussões Negativas
+08/08/2016,08/08/2016,1,Repercussões Negativas
+10/08/2016,08/10/2016,1,Repercussões Negativas
+12/08/2016,08/12/2016,1,Repercussões Negativas
+14/08/2016,08/14/2016,1,Repercussões Negativas
+15/08/2016,08/15/2016,1,Repercussões Negativas
+18/08/2016,08/18/2016,1,Repercussões Negativas
+21/08/2016,08/21/2016,1,Repercussões Negativas
+13/05/2016,05/13/2016,1,Repercussões Neutras
+19/05/2016,05/19/2016,1,Repercussões Neutras
+20/05/2016,05/20/2016,1,Repercussões Neutras
+22/05/2016,05/22/2016,1,Repercussões Neutras
+24/05/2016,05/24/2016,1,Repercussões Neutras
+01/06/2016,06/01/2016,1,Repercussões Neutras
+02/06/2016,06/02/2016,1,Repercussões Neutras
+05/06/2016,06/05/2016,1,Repercussões Neutras
+07/06/2016,06/07/2016,1,Repercussões Neutras
+10/06/2016,06/10/2016,1,Repercussões Neutras
+14/06/2016,06/14/2016,1,Repercussões Neutras
+15/06/2016,06/15/2016,1,Repercussões Neutras
+17/06/2016,06/17/2016,1,Repercussões Neutras
+22/06/2016,06/22/2016,1,Repercussões Neutras
+23/06/2016,06/23/2016,1,Repercussões Neutras
+24/06/2016,06/24/2016,1,Repercussões Neutras
+04/07/2016,07/04/2016,1,Repercussões Neutras
+07/07/2016,07/07/2016,1,Repercussões Neutras
+11/07/2016,07/11/2016,1,Repercussões Neutras
+14/07/2016,07/14/2016,1,Repercussões Neutras
+15/07/2016,07/15/2016,1,Repercussões Neutras
+16/07/2016,07/16/2016,1,Repercussões Neutras
+19/07/2016,07/19/2016,1,Repercussões Neutras
+20/07/2016,07/20/2016,1,Repercussões Neutras
+30/07/2016,07/30/2016,1,Repercussões Neutras
+04/08/2016,08/04/2016,1,Repercussões Neutras
+08/08/2016,08/08/2016,1,Repercussões Neutras
+15/08/2016,08/15/2016,1,Repercussões Neutras
+17/08/2016,08/17/2016,1,Repercussões Neutras
+13/05/2016,05/13/2016,1,Repercussões Positivas
+17/05/2016,05/17/2016,1,Repercussões Positivas
+18/05/2016,05/18/2016,1,Repercussões Positivas
+19/05/2016,05/19/2016,1,Repercussões Positivas
+23/05/2016,05/23/2016,1,Repercussões Positivas
+24/05/2016,05/24/2016,1,Repercussões Positivas
+25/05/2016,05/25/2016,1,Repercussões Positivas
+08/06/2016,06/08/2016,1,Repercussões Positivas
+09/06/2016,06/09/2016,1,Repercussões Positivas
+10/06/2016,06/10/2016,1,Repercussões Positivas
+13/06/2016,06/13/2016,1,Repercussões Positivas
+14/06/2016,06/14/2016,1,Repercussões Positivas
+20/06/2016,06/20/2016,1,Repercussões Positivas
+30/06/2016,06/30/2016,1,Repercussões Positivas
+06/07/2016,07/06/2016,1,Repercussões Positivas
+07/07/2016,07/07/2016,1,Repercussões Positivas
+16/07/2016,07/16/2016,1,Repercussões Positivas
+27/07/2016,07/27/2016,1,Repercussões Positivas
+01/08/2016,08/01/2016,1,Repercussões Positivas
+04/08/2016,08/04/2016,1,Repercussões Positivas
+09/08/2016,08/09/2016,1,Repercussões Positivas
+10/08/2016,08/10/2016,1,Repercussões Positivas
+12/08/2016,08/12/2016,1,Repercussões Positivas
+16/08/2016,08/16/2016,1,Repercussões Positivas
+19/08/2016,08/19/2016,1,Repercussões Positivas
