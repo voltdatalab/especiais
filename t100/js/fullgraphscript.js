@@ -1,12 +1,12 @@
-var margin = {left:200, top:70, right:120, bottom:100},
+var margin = {left:0, top:-50, right:0, bottom:0},
 	width = Math.max( Math.min(window.innerWidth, 1100) - margin.left - margin.right - 20, 400),
     height = Math.max( Math.min(window.innerHeight - 250, 900) - margin.top - margin.bottom - 20, 400),
-    innerRadius = Math.min(width * 0.25, height * .45),
-    outerRadius = innerRadius * 1.10;
+    innerRadius = Math.min(width * 50, height * .45),
+    outerRadius = innerRadius * 1.1;
 	
 //Recalculate the width and height now that we know the radius
-width = outerRadius * 2 + margin.right + margin.left;
-height = outerRadius * 2 + margin.top + margin.bottom;
+width = outerRadius * 3.5 + margin.right + margin.left;
+height = outerRadius * 3.5 + margin.top + margin.bottom;
 	
 //Reset the overall font size
 var newFontSize = Math.min(70, Math.max(40, innerRadius * 72.5 / 250));
@@ -58,7 +58,11 @@ descricao["Declarações"] = "Reflexões e comentários gerais de dentro do Exec
 ////////////////////////////////////////////////////////////
 			
 var svg = d3.select("#chart").append("svg")
-    .attr("viewBox", "0 0 1200 700");
+    .attr("width", '80%')
+    .attr("height", '100%')
+    .attr('viewBox','0 0 '+Math.min(width,height)+' '+Math.min(width,height))
+    .attr('preserveAspectRatio','xMinYMin');
+    //.attr("viewBox", "0 0 1000 800");
     //.attr("width", width + margin.left + margin.right)
     //.attr("height", height + margin.top + margin.bottom);
 
@@ -90,7 +94,7 @@ d3.json('https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/d
 	//Set more loom functions
 	loom
 		.sortSubgroups(sortCharacter)
-		.heightInner(innerRadius*0.75/characterOrder.length);
+		.heightInner(innerRadius*.8/characterOrder.length);
 	
 					
 	//Cores

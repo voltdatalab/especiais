@@ -61,10 +61,10 @@ h5 {
 }
 
 #note {
-    font: 1.5em 'Inconsolata';
+    font: 1.2em 'Inconsolata';
     margin: 0px 30px 10px 30px;
     max-width: 800px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 #chart {
