@@ -75,7 +75,7 @@ var tooltip = d3.select("body").append("div")
   .style("opacity", 0);
 
 // load data
-d3.csv("../dados/dados_cat.csv", 
+d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/dados/dados_cat.csv", 
        function(error, data) {
 
   // CSV pra número
