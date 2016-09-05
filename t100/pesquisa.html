@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michel Temer: 100 dias com controvérsias</title>
+    <meta name="author" content="Volt Data Lab">
+    <meta name="description" content="Governo interino de Michel Temer teve uma polêmica por dia nos três primeiros meses, mostra pesquisa inédita">
+    <meta name="keywords" content="política, Brasil, política brasileira, jornalismo de dados, data journalism, data visualization, volt data lab">
+    <meta name='url' content='http://especiais.voltdata.info/t100'>
+    <meta name='coverage' content='Brasil'>
+    <meta name='distribution' content='Global'>
+    <meta name='rating' content='General'>
+    <meta name='subtitle' content='Governo interino de Michel Temer teve uma polêmica por dia nos três primeiros meses, mostra pesquisa inédita'>
+    <meta name='target' content='all'>
+    <meta name='HandheldFriendly' content='True'>
+    <meta name='MobileOptimized' content='320'>
+    <meta property="og:image" content="https://github.com/voltdatalab/especiais/blob/gh-pages/t100/img/temer_dilma.jpg?raw=true" />
+    <meta property="og:url" content="http://especiais.voltdata.info/t100">
+    <meta property="og:title" content="100 dias com controvérias">
+    <meta property="og:description" content="Volt classificou cerca de 700 matérias publicadas durante 100 dias de Michel Temer no poder. Veja o que encontramos.">
+    <!-- estilos -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- J Query-->
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <!-- sheetsee -->
+    <script type='text/javascript' src='../js/tabletop1.3.4.js'></script>
+    <script type='text/javascript' src='../js/sheetsee.js'></script>
+            <script src="../js/awesomplete.min.js"></script>
+        <link rel="stylesheet" href="awesomplete.css" />
+    <!-- font awesome! -->
+    <script src="https://use.fontawesome.com/ebef64dc49.js"></script>
+    
+    <style>
+        
+        h1 {
+            font-size: 1.5em;
+        }
+        .tHeader{
+            background-color: #666;
+            color: #fff;
+            text-transform: capitalize;
+            padding: 10px;
+            font: 1.2em 'Inconsolata';
+        }
+        
+        input{
+            font: 1.3em 'Inconsolata';
+            background-color: #cbcbcb;
+            border: 0px;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+        td{
+            border: 1px solid #000;
+            font-size: .8em;
+            padding: 3px;
+            text-align: center
+        }
+        
+        #link{
+            color: #000;
+        }
+        
+        #link:hover{
+            color: #a7000c;
+        }
+        
+        .btn{
+            background-color: #777;
+            padding: 5px;
+        }
+        h5{
+            line-height: 3em
+        }
+    
+        #conteudo{
+            margin: 0 5%;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div style="background-color:#a7000c;">
+        <a href="http://voltdata.info" target="_blank"> <img src="img/logo.png" alt="logo" id="logo"> </a>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> </button>
+            <div class="dropdown-content"> <a href="#destaques">Destaques</a> <a href="#contexto">Contexto</a> <a href="#metodologia">Metodologia</a><a href="http://voltdata.info" target="_blank">Site do Volt</a> </div>
+        </div>
+    </div>
+    <div id="conteudo">
+    <div class="content-wrapper">
+    <h1>Levantamento</h1>
+        <p>A pesquisa analisou cerca de 700 reportagens, notas e publicações da <a href="http://agenciabrasil.ebc.com.br">Agência Brasil</a> de 12 de maio a 22 de agosto nas quais o presidente interino Michel Temer foi citado. </p>
+            <p>Foram realizadas buscas na aba de "Notícias" do <a href="http://google.com">Google</a> com o nome de “Michel Temer”, levando em conta apenas material publicado no site da agência estatal de notícias. </p>
+        <p>Aqui, você poderá fazer buscas em toda a base levantada pelo <strong>Volt Data Lab</strong>.</p>
+        <hr>   
+        <h4>Escolha um link abaixo para preencher a busca, clique na caixa e aperte Enter.</h4>
+        <h5><a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Polêmicas">Polêmicas</a> -
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Repercussões">Repercussões</a> -
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Declarações">Declarações</a> -
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Políticas">Políticas</a> - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Nomeações">Nomeações</a>-
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Ministros & Cargos">Ministros & Cargos</a>
+       - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Novas Políticas">Novas Políticas</a>
+        - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Políticas Existentes">Políticas Existentes</a>
+        - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Temer">Temer</a> - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Protestos">Protestos</a> -
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Cortes & Revisões">Cortes & Revisões</a> - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Congresso & Base Aliada">Congresso & Base Aliada</a>
+        <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Impeachment">Impeachment</a> - <a href="#" id="1" class="btn" onclick="reply_click(this)" data-product-name="Outros">Outros</a></h5>
+        <h4>Ou busque por palavra-chave</h4>
+        <form>
+    <input type="text" id="fullTableFilter" placeholder="busque por palavra" class="awesomplete" data-list="Polêmicas, Repercussões, Declarações, Políticas, Nomeações">
+</form>  
+    <div id="fullTable"></div>
+    
+        <h5><a href="https://docs.google.com/spreadsheets/d/1Kw1BPQKTjN4mEl5b6QqCbTalU3_pAG8qwpFgpJRwtPE/pubhtml" target="_blank">Acesse a tabela no Google Sheets</a></h5>
+        
+        <script type="text/javascript">
+    
+    function reply_click(element)
+    {
+    document.getElementById('fullTableFilter').value = element.getAttribute('data-product-name');
+    }    
+    
+</script>
+
+    </div>
+</div>
+
+<script id="fullTable" type="text/html">
+  <table>
+    <tr><th class="tHeader">Data</th><th class="tHeader">Matéria</th><th class="tHeader">categoria</th><th class="tHeader">Subcategoria</th></tr>
+      {{#rows}}
+        <tr><td>{{data}}</td><td><a id="link" href="{{link}}" target="_blank">{{headline}}</a></td><td>{{categoria}}</td><td>{{subcategoria}}</td></tr>
+      {{/rows}}
+  </table>
+</script>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var URL = "https://docs.google.com/spreadsheets/d/1Kw1BPQKTjN4mEl5b6QqCbTalU3_pAG8qwpFgpJRwtPE/pubhtml"
+    Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  })
+  function showInfo(data) {
+    var tableOptions = {"data": data
+    , "pagination": 0, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
+    Sheetsee.makeTable(tableOptions)
+    Sheetsee.initiateTableFilter(tableOptions)
+    var california = Sheetsee.getKeyword(data, "california")
+    var calOptions = { "data": california,
+                       "pagination": 5,
+                       "tableDiv": "#calTable",
+                       "filterDiv": "#calFilter"
+                     }
+    Sheetsee.makeTable(calOptions)
+    Sheetsee.initiateTableFilter(calOptions)
+    var html = Sheetsee.ich.photogrid({'rows': data})
+    $('#photogrid').html(html)
+  }
+</script>              
+    
+    </body>
+</html>

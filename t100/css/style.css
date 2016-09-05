@@ -98,6 +98,11 @@ h5 {
     color: #cbcbcb
 }
 
+.alerta {
+    width: 100%;
+    position: absolute
+}
+
 .sources {
     font-size: 1.2em;
     max-width: 300px;
@@ -267,7 +272,7 @@ ol {
 }
 
 
-/* The container <div> - needed to position the dropdown content */
+/* Menu */
 
 .dropdown {
     position: relative;
@@ -304,14 +309,14 @@ ol {
 }
 
 
-/* Show the dropdown menu on hover */
+/* Menu hover */
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+/* Menu background */
 
 .dropdown:hover .dropbtn {
     background-color: #a7000c;
