@@ -92,14 +92,13 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
-    .style("fill", "#fff")
+    .style("fill", "#1e1e1e")
     .style("font", "16px Inconsolata")
     .call(xAxis)
     .append("text")
     .attr("class", "label")
     .attr("x", width)
     .attr("y", -6)
-    .style("fill", "#fff")
     .style("text-anchor", "end")
     .style("font", "16px Inconsolata")
     .text("");
@@ -115,7 +114,7 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
   // y
   svg.append("g")
     .attr("class", "y axis")
-    .style("fill", "#fff")
+    .style("fill", "#1e1e1e")
     .style("font", "16px Inconsolata")
     .call(yAxis)
     .append("text")
@@ -124,7 +123,6 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    
     .text("Matérias publicadas");
 
   // pontos
@@ -132,10 +130,10 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
     .data(data)
     .enter().append("circle")
     .attr("class", "dot")
-    .attr("r", 6)
+    .attr("r", 4)
     .attr("cx", xMap)
     .attr("cy", yMap)
-    .style("opacity", ".8")
+    .style("opacity", ".7")
     .style("fill", function(d) {
       return color(cValue(d));
     })
@@ -144,7 +142,7 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
         .duration(50)
         .attr("min-height", "120px")
         .style("opacity", 1)
-        .style("background-color", "rgba(0,0,0,.8)")
+        .style("background-color", "rgba(73, 69, 58, .7)")
         .style("font", "14px Inconsolata")
         .style("padding", "10px");
 
@@ -183,8 +181,8 @@ d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/da
     .attr("x", width - 24)
     .attr("y", 9)
     .attr("dy", ".35em")
-    .style("fill", "#fff")
-    .style("font", "16px Inconsolata")
+    .style("fill", "#1e1e1e")
+    .style("font", "14px Inconsolata")
     .style("text-anchor", "end")
     .text(function(d) {
       return d;

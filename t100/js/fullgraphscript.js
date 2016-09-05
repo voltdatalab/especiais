@@ -5,8 +5,8 @@ var margin = {left:0, top:-50, right:0, bottom:0},
     outerRadius = innerRadius * 1.1;
 	
 //Recalculate the width and height now that we know the radius
-width = outerRadius * 3.5 + margin.right + margin.left;
-height = outerRadius * 3.5 + margin.top + margin.bottom;
+width = outerRadius * 4; //+ margin.right + margin.left;
+height = outerRadius * 4; //+ margin.top + margin.bottom;
 	
 //Reset the overall font size
 var newFontSize = Math.min(70, Math.max(40, innerRadius * 72.5 / 250));
@@ -99,7 +99,7 @@ d3.json('https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/t100/d
 					
 	//Cores
 	var locations = ["Base Aliada",	"Cortes & Revisões", "Impeachment",	"Ministros & Cargos", "Novas Políticas", "Outros", "Políticas Existentes",	"Protestos", "Temer"];
-	var colors = ['#8c510a','#bf812d','#dfc27d','#f6e8c3','#f5f5f5', '#01665e','#c7eae5','#80cdc1','#35978f'];
+	var colors = ['#8c510a','#bf812d','#dfc27d','#c4b99c','#938b75', '#01665e','#00332f','#80cdc1','#35978f'];
 	var color = d3.scaleOrdinal()
     	.domain(locations)
     	.range(colors);

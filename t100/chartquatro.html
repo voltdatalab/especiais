@@ -26,7 +26,7 @@
       </style>
   </head>
   <body>
-      <h3>Publicações da Agência Brasil sobre Temer  </h3>
+      <h3>Cobertura de políticas do novo governo pela Agência Brasil  </h3>
     <div id="chart"></div>
       <h4 class="sources">FONTE: Levantamento do Volt Data Lab com cerca de 700 publicações da Agência Brasil de 12 de maio a 22 de agosto de 2016</h4>
     <script src="d3/d3.v3.min.js"></script>
@@ -58,7 +58,7 @@ var yText = function(d, i) { return y(d, i) + yScale.rangeBand() / 2; };
 var x = d3.scale.linear().domain([0, d3.max(sortedData, barValue)]).range([0, maxBarWidth]);
 // svg container element
 var chart = d3.select('#chart').append("svg")
-    .attr("viewBox", "0 0 600 150");
+    .attr("viewBox", "0 0 600 100");
   //.attr('width', maxBarWidth + barLabelWidth + valueLabelWidth)
   //.attr('height', gridLabelHeight + gridChartOffset + sortedData.length * barHeight);
 // grid line labels
@@ -72,7 +72,7 @@ gridContainer.selectAll("text").data(x.ticks(10)).enter().append("text")
   .attr("text-anchor", "middle")
   .text(String);
     gridContainer.append("text")
-  .attr("x", 390)
+  .attr("x", 410)
   .attr("dy", -3)
     .style("fill", "#1e1e1e")
     .text("%");
@@ -90,7 +90,7 @@ labelsContainer.selectAll('text').data(sortedData).enter().append('text')
   .attr('y', yText)
   .attr('stroke', 'none')
   .attr('fill', 'black')
-    .style("font", "16px Inconsolata")
+    .style("font", "12px Inconsolata")
     .style("fill", "#1e1e1e")
   .attr("dy", ".35em") // vertical-align: middle
   .attr('text-anchor', 'end')
@@ -123,11 +123,11 @@ barsContainer.append("line")
 }
     </script>
     <script id="csv" type="text/csv">tipo,   percentual
-Declarações,    19.88
-Nomeações,	10.52
-Polêmicas,	12.82
-Políticas,	18.01
-Repercussões,	38.76</script>
+Novas Políticas,    37.6
+Cortes/Revisões,	30.4
+Pol. Existentes,	17.6
+Outros,	14.4
+</script>
     <script>renderChart();</script>
   </body>
 </html>
