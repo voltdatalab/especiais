@@ -92,6 +92,12 @@ h5 {
     text-align: center
 }
 
+#perma{
+    border: 1px solid #cbcbcb;
+    padding: 3px;
+    color: #cbcbcb
+}
+
 .sources {
     font-size: 1.2em;
     max-width: 300px;
@@ -344,6 +350,9 @@ ol {
         }
     #header{
         position: relative;
+    }
+    #perma{
+        display: none;
     }
     
 }
