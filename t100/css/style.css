@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700';
-
 body {
     font-family: 'Merriweather', serif;
     font-size: 1rem;
@@ -25,7 +24,8 @@ h1 {
     margin-bottom: 20px
 }
 
-h3, h2 {
+h3,
+h2 {
     font-family: 'Inconsolata';
     font-size: 1.4em
 }
@@ -35,8 +35,8 @@ h5 {
     font-size: 12px;
 }
 
-.social{
-    margin-top: 30px; 
+.social {
+    margin-top: 30px;
 }
 
 .content-wrapper {
@@ -56,7 +56,6 @@ h5 {
     margin: 30px auto;
     max-width: 700px;
     font-weight: 300;
-    
 }
 
 .intro {
@@ -85,14 +84,14 @@ h5 {
     margin: 10px 30px 5px 30px;
 }
 
-#menuin{
+#menuin {
     margin: 0 auto;
     font-size: 16px;
     margin: 60px;
     text-align: center
 }
 
-#perma{
+#perma {
     border: 1px solid #cbcbcb;
     padding: 3px;
     color: #cbcbcb
@@ -100,6 +99,7 @@ h5 {
 
 .alerta {
     width: 100%;
+    text-transform: uppercase;
     position: absolute
 }
 
@@ -115,7 +115,7 @@ p {
     margin-bottom: 25px;
 }
 
-strong{
+strong {
     color: #000
 }
 
@@ -124,7 +124,7 @@ a:link,
 a:visited,
 a:active {
     text-decoration: underline;
-    color: #faa61a ;
+    color: #faa61a;
 }
 
 a:hover {
@@ -160,7 +160,7 @@ a:hover {
     line-height: 1.7em
 }
 
-.middle a{
+.middle a {
     color: #666;
 }
 
@@ -171,9 +171,16 @@ a:hover {
     text-align: center
 }
 
-.way_head{
+.way_head {
     text-align: center;
 }
+
+#explain {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto -30px;
+}
+
 
 /* Lista menu */
 
@@ -197,12 +204,12 @@ ol {
     background-color: #faa61a;
 }
 
-.legenda a{
+.legenda a {
     color: white;
     text-decoration: none;
 }
 
-.legenda a:hover{
+.legenda a:hover {
     background-color: #ababab;
 }
 
@@ -254,7 +261,7 @@ ol {
 }
 
 .outer-label-value {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: 'Merriweather';
     fill: #faa61a;
 }
@@ -340,24 +347,26 @@ ol {
     .creditoum {
         line-height: 2em;
     }
-    #subtitulo{
+    #subtitulo {
         margin: 30px 3%;
     }
     .middle {
-    background-color: #cbcbcb;
-    margin: 20px auto;
-        max-width: 100%; 
+        background-color: #cbcbcb;
+        margin: 20px auto;
+        max-width: 100%;
         width: 95%;
-        position:relative
+        position: relative
     }
-    #grafdois{
-           height: 680px; 
-        }
-    #header{
+    #grafdois {
+        height: 680px;
+    }
+    #header {
         position: relative;
     }
-    #perma{
+    #perma {
         display: none;
     }
-    
+    #explain{
+        margin: 0 5%;
+    }
 }
