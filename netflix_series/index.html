@@ -19,7 +19,7 @@
     <meta name='target' content='all'>
     <meta name='HandheldFriendly' content='True'>
     <meta name='MobileOptimized' content='320'>
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://github.com/voltdatalab/especiais/blob/gh-pages/netflix_series/main.png?raw=true" />
     <meta property="og:url" content="http://especiais.voltdata.info/netflix_series">
     <meta property="og:title" content="The Best And Worst From Netflix's Original Series">
     <meta property="og:description" content="Check series that Netflix labeled as 'Original', as well as their categories and their rating according to IMDB.">
@@ -109,7 +109,7 @@
         var formatValue = d3.format(",d");
         var x = d3.scaleLinear().rangeRound([0, width]);
         var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/geral/netflix/netflix_original_%20series_table.csv", type, function (error, data) {
+        d3.csv("https://raw.githubusercontent.com/voltdatalab/especiais/gh-pages/netflix_series/data.csv", type, function (error, data) {
             if (error) throw error;
             x.domain(d3.extent(data, function (d) {
                 return d.imdb_rating;
