@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Loading CSV Data with D3</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        th {
+            height: 50px;
+            background-color: #dedede;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        
+        td {
+            font-size: 1.2em;
+        }
+        
+        table,
+        th,
+        td {
+            border-bottom: 1px solid #cbcbcb;
+            padding: 10px;
+            border-radius: 1px;
+        }
+        
+        td:nth-last-child(1) {
+            text-align: center;
+            color: #ededed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div id="table"></div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="stupidtable.js"></script>
+    </div>
+</body>
+<script type="text/javascript">
+    d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/geral/netflix/netflix_original_%20series_table.csv", function (error, myData) {
+        if (error) {
+            console.log("Had an error loading file.");
+        }
+        var myArray = [];
+        var allDifferences = [];
+        myData.forEach(function (d, i) {
+            d.percentage = d.percent * 100;
+            myArray.push([d.show, d.category, d.imdb_rating]);
+            allDifferences.push(d.imdb_rating);
+            console.log(allDifferences);
+        });
+        console.log(myData);
+        console.log(myArray);
+        // how do I sort myData by column [2]? This returns a bunch of weird things, so let's go by the percentages
+        // myArray.sort(function(a,b) {
+        //      return d3.descending(a[2], b[2]);
+        //      })
+        myArray.sort(function (a, b) {
+            return d3.descending(a[3], b[3]);
+        })
+        var table = d3.select("#table").append("table");
+        var header = table.append("thead").append("tr");
+        header.selectAll("th").data(["Show", "Category", "IMDB Rating"]).enter().append("th").text(function (d) {
+            return d;
+        });
+        var tablebody = table.append("tbody");
+        rows = tablebody.selectAll("tr").data(myArray).enter().append("tr");
+        // Using Scales for Heat Map
+        console.log('Extent is ', d3.extent(allDifferences));
+        var colorScale = d3.scale.linear().domain(d3.extent(allDifferences)).range(['#d0d1e6', '#0570b0']);
+        // Building the Cells for the Nested Table
+        cells = rows.selectAll("td")
+            // each row has data associated; we get it and enter it for the cells.
+            .data(function (d) {
+                console.log(d);
+                return d;
+            }).enter().append("td").style("background-color", function (d, i) {
+                if (i === 2) {
+                    return colorScale(d);
+                }
+            }).text(function (d, i) {
+                if (i === 2) {
+                    return d + "";
+                }
+                else {
+                    return d;
+                }
+            });
+        d3.selectAll("th").data(["string", "string", "int"]).attr("data-sort", function (d) {
+            return d;
+        });
+        // Sorting my Table
+        $("table").stupidtable();
+    });
+</script>
+
+</html>

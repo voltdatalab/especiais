@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700');
+body {
+    font-family: 'Inconsolata', sans-serif;
+    background-color: #ededed;
+    margin: 30px 5%;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-family: 'Merriweather';
+}
+
+a {
+    color: #a7002c;
+}
+
+a:hover {
+    color: #777;
+}
+
+h1 {
+    font-size: 2em;
+    text-transform: capitalize
+}
+
+#head{
+    text-align: center;
+    margin: 40px auto 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a7000c;
+    max-width: 500px
+}
+
+
+#notes {
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+destaque {
+    font-family: 'Merriweather';
+    font-weight: 500;
+    font-size: 2em;
+    color: #a7002c;
+}
+
+span {
+    color: #a7000c;
+    font-size: 12px;
+}
+
+.conteudo {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+/* legenda */
+
+ul {
+    color: #000;
+    padding: 0;
+    position: absolute;
+    list-style: none
+}
+
+.legenda li {
+    color: #fff;
+    padding: 2px;
+    text-align: center;
+    line-height: 1.6em;
+    margin-bottom: 5px;
+    max-width: 150px;
+}
+
+.notas {
+    max-width: 700px;
+}
+
+.table {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+}
+
+#table {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+iframe {
+    width: 100%;
+    height: 3800px;
+}
+
+
+/* Graph */
+
+#graph {
+    max-width: 2000px;
+    margin: 0 0 0 150px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #777;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font: 10px 'Inconsolata';
+}
+
+.cells path {
+    fill: none;
+    pointer-events: all;
+}
+
+.cells {
+    fill: #cbcbcb;
+}
+
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 760px) {
+    ul {
+        color: #000;
+    }
+    .legenda li {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 300;
+        display: none;
+    }
+    #graph {
+        display: none;
+    }
+    iframe {
+        height: 5000px;
+    }
+    .table {
+        margin: 0
+    }
+    h3 {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    ul {
+        color: #000;
+    }
+    .legenda li {
+        margin: 0;
+        display: none;
+        font-size: 1em;
+        font-weight: 300;
+    }
+    #graph {
+        display: none;
+    }
+    iframe {
+        height: 4000px
+    }
+}
+
+
+/* categorias */
+
+#action {
+    color: #fff;
+    background-color: #960200
+}
+
+#comedy {
+    background-color: #63458A
+}
+
+#teenager {
+    background-color: #FFC156
+}
+
+#drama {
+    background-color: #0B7A75
+}
+
+#horror {
+    background-color: #8F7E4F
+}
+
+#police_mystery {
+    background-color: #4279BC
+}
+
+#political_thriller {
+    background-color: #7C98B3
+}
+
+#romance {
+    background-color: #EF7CAC
+}
+
+#documentary {
+    background-color: #96939B
+}
+
+#science_fiction {
+    background-color: #60463B
+}
+
+#reality_show {
+    background-color: rgba(0, 126, 167, 1)
+}

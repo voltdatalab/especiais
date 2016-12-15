@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Best And Worst From Netflix's Original Series</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/ad3531ba27.js"></script>
+    
+    <!-- METAS -->
+   <meta name="author" content="Volt Data Lab">
+    <meta name="description" content="">
+    <meta name="keywords" content="netflix, series, original, data journalism, data visualization, volt data lab">
+    <meta name='url' content='http://especiais.voltdata.info/netflix_series'>
+    <meta name='coverage' content='Global'>
+    <meta name='distribution' content='Global'>
+    <meta name='rating' content='General'>
+    <meta name='subtitle' content=''>
+    <meta name='target' content='all'>
+    <meta name='HandheldFriendly' content='True'>
+    <meta name='MobileOptimized' content='320'>
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="http://especiais.voltdata.info/netflix_series">
+    <meta property="og:title" content="The Best And Worst From Netflix's Original Series">
+    <meta property="og:description" content="Check series that Netflix labeled as 'Original', as well as their categories and their rating according to IMDB.">
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67508392-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div id="head">
+        <h1>The Best And Worst From Netflix's Original Series</h1>
+        <h4 class="social"><a href="http://twitter.com/share?text=The Best And The Worst From Netflix's Original Series by @voltdatalab &url=http://especiais.voltdata.info/netflix_series" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//especiais.voltdata.info/netflix_series" target="_blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></h4>
+        </div>
+        <p>The graphic shows series that Netflix labeled as <strong>'Original'</strong>, as well as their categories and their rating according to <a href="http://www.imdb.com/" target="_blank">IMDB</a>.</p>
+        <p>You can interact with the graphic by using the cursor in the legend or in the circles (it might take 1 second to trigger).<p>
+        <ul class="legenda">
+            <li id="action" class="legendas">action</li>
+            <li id="comedy" class="legendas">comedy </li>
+            <li id="documentary" class="legendas">documentary </li>
+            <li id="drama" class="legendas">drama </li>
+            <li id="horror" class="legendas">horror </li>
+            <li id="police_mystery" class="legendas">police </li>
+            <li id="political_thriller" class="legendas">political </li>
+            <li id="science_fiction" class="legendas">science fiction </li>
+            <li id="reality_show" class="legendas">reality show </li>
+            <li id="romance" class="legendas">romance </li>
+            <li id="teenager" class="legendas">teenager </li>
+        </ul>
+        <div id="graph">
+            <svg viewBox="0 0 550 250"></svg>
+            <script src="https://d3js.org/d3.v4.0.0-alpha.33.min.js"></script>
+        </div>
+        <div class="table">
+            <h3>Browse the data</h3>
+            <iframe src="graph.html" frameborder="no" seamless></iframe>
+        </div>
+        <hr>
+        <div class="notas">
+            <h2 id="notes">NOTES</h2>
+            <ul class="notas">
+                <li>
+                    <p>Data was gathered in December 2016. Last update is <strong>December 2016</strong>.</p>
+                </li>
+                <li>
+                    <p>Some series branded “Original” are not really original, like <em>The Killing</em>, <em>Black Mirror</em>, <em>Gilmore Girls</em> or <em>Arrested Development</em>, which started on TV but were picked up by Netflix in order to continue production, if only for one more season.</p>
+                </li>
+                <li>
+                    <p>Movie categories were simplified for clarity, and reflect only the main category of any given series. A comedy/drama that is more comedy than drama got the "comedy" label. This was arbitrarily defined. </p>
+                </li>
+                <li>
+                    <p>Children's cartoons were excluded, there are too many of them. <em>BoJack Horseman</em> and <em>F Is For Family</em>, which are adult cartoons, were added as “comedy”.</p>
+                </li>
+                <li>
+                    <p>Second season of "Better Call Saul" not available in Netflix US.</p>
+                </li>
+                <li>
+                    <p>Made by <a href="http://twitter/@ProjetoStock" target="_blank">ProjetoStock</a>, from the agency <a href="http://voltdata.info" target="_blank">Volt Data Lab</a>.</p>
+                </li>
+                <li>
+                    <p>You can access the data (csv format) <a href="https://github.com/voltdatalab/dados/blob/master/geral/netflix/datatable.csv" target="_blank">in this link</a>.</p>
+                </li>
+                                <li>
+                    <p>This project is not sponsored by anyone.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var svg = d3.select("svg")
+            , margin = {
+                top: 0
+                , right: 0
+                , bottom: 40
+                , left: 10
+            }
+            , width = 500
+            , height = 250 - margin.top - margin.bottom;
+        var formatValue = d3.format(",d");
+        var x = d3.scaleLinear().rangeRound([0, width]);
+        var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        d3.csv("https://raw.githubusercontent.com/voltdatalab/dados/master/geral/netflix/netflix_original_%20series_table.csv", type, function (error, data) {
+            if (error) throw error;
+            x.domain(d3.extent(data, function (d) {
+                return d.imdb_rating;
+            }));
+            var simulation = d3.forceSimulation(data).force("x", d3.forceX(function (d) {
+                return x(d.imdb_rating);
+            }).strength(1)).force("y", d3.forceY(height / 2)).force("collide", d3.forceCollide(3)).stop();
+            for (var i = 0; i < 120; ++i) simulation.tick();
+            g.append("g").attr("class", "axis axis--x").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x).ticks(10, "f"));
+            svg.append("text").attr("class", "x label").attr("text-anchor", "end").attr("x", 444).attr("y", 30).style("font-size", "10px").text("Median");
+            svg.append("rect").attr("x", 409.5).attr("y", 9.5).attr("width", 1).style("fill", "#cbcbcb").attr("height", 200);
+            var cell = g.append("g").attr("class", "cells").selectAll("g").data(d3.voronoi().extent([[-margin.left, -margin.top], [width + margin.right, height + margin.top]]).x(function (d) {
+                return d.x;
+            }).y(function (d) {
+                return d.y;
+            }).polygons(data)).enter().append("g");
+            cell.append("circle").attr("class", function (d) {
+                return d.data.category;
+            }).attr("r", 3).attr("cx", function (d) {
+                return d.data.x;
+            }).attr("cy", function (d) {
+                return d.data.y;
+            }).attr("fill", function (d) {
+                if (d.data.category === "action") return "rgba(150, 2, 0, 0.9)";
+                if (d.data.category === "comedy") return "rgba(99, 69, 138, 0.9)";
+                if (d.data.category === "teenager") return "rgba(255, 193, 86, 0.9)";
+                if (d.data.category === "drama") return "rgba(11, 122, 117, 0.9)";
+                if (d.data.category === "horror") return "rgba(143, 126, 79, 0.9)";
+                if (d.data.category === "police_mystery") return "rgba(66, 121, 188, 0.9)";
+                if (d.data.category === "political_thriller") return "rgba(124, 152, 179, 0.9)";
+                if (d.data.category === "romance") return "rgba(239, 124, 172, 0.9)";
+                if (d.data.category === "documentary") return "rgba(150, 147, 155, 0.9)";
+                if (d.data.category === "reality_show") return "rgba(0, 126, 167, 0.9)";
+                if (d.data.category === "science_fiction") return "rgba(96, 70, 59, 0.9)";
+            });
+            d3.selectAll(".legendas").on("mouseover", function (d) {
+                var thisContinent = this.id;
+                console.log(thisContinent)
+                d3.selectAll("circle").attr("opacity", 0.1);
+                d3.selectAll("." + thisContinent).attr("opacity", 1);
+            }).on("mouseout", function () {
+                d3.selectAll("circle").attr("opacity", 1);
+            })
+            cell.append("path").attr("d", function (d) {
+                return "M" + d.join("L") + "Z";
+            });
+            cell.append("title").text(function (d) {
+                return "Show: " + d.data.show + "\n" + "Category: " + d.data.category + "\n" + "IMDB Rating = " + d.data.imdb_rating;
+            });
+        });
+
+        function type(d) {
+            if (!d.imdb_rating) return;
+            d.imdb_rating = +d.imdb_rating;
+            return d;
+        }
+    </script>
+</body>
